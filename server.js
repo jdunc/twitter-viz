@@ -1,6 +1,7 @@
 var express = require('express');
 var passport = require('passport');
 var Strategy = require('passport-twitter').Strategy;
+require('dotenv').config();
 
 
 // Configure the Twitter strategy for use by Passport.
@@ -10,10 +11,11 @@ var Strategy = require('passport-twitter').Strategy;
 // user's behalf, along with the user's profile.  The function must invoke `cb`
 // with a user object, which will be set at `req.user` in route handlers after
 // authentication.
+console.log('process', process.env.CONSUMER_KEY);
 passport.use(new Strategy({
         consumerKey: process.env.CONSUMER_KEY,
         consumerSecret: process.env.CONSUMER_SECRET,
-        callbackURL: 'http://127.0.0.1:3000/login/twitter/return'
+        callbackURL: '/login/twitter/return'
     },
     function(token, tokenSecret, profile, cb) {
         // In this example, the user's Twitter profile is supplied as the user
