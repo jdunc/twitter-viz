@@ -20,11 +20,12 @@ The target audience of this project is on the one hand anyone who views popular 
 Users simply have to enter the url of a livestream on twitch or any topic for twitter to immediately receive visualizations.
 
 ##Libraries and Frameworks
-* <a href="" target="blank">Twitter</a>
-* <a href="" target="blank">Twitch</a>
-* <a href="" target="blank">D3</a>
-* <a href="" target="blank">Passport.js</a>
-* <a href="" target="blank">Hicharts</a>
+* <a href="https://dev.twitter.com/oauth/application-only" target="blank">Twitter</a>
+* <a href="https://github.com/justintv/Twitch-API" target="blank">Twitch GitHub</a>
+* <a href="https://github.com/justintv/Twitch-API/blob/master/IRC.md" target="blank">Twitch IRC GitHub</a>
+* <a href="https://github.com/d3/d3/wiki" target="blank">D3</a>
+* <a href="http://passportjs.org/docs" target="blank">Passport.js</a>
+* <a href="http://api.highcharts.com/highcharts" target="blank">Hicharts</a>
 
 ## Feature list
 * List all features in priority order (including stretch features)
@@ -34,8 +35,6 @@ Users simply have to enter the url of a livestream on twitch or any topic for tw
 
 ## Trello Scrum Board
 <a href="https://trello.com/b/eGPJPNvg/live-data-visualization" target="blank">Trello Board</a>
-
-https://trello.com/b/eGPJPNvg/live-data-visualization
 
 ## Link to Github Repository
 <a href="https://github.com/jdunc/twitter-viz" target="blank">Data Visualization Repository</a>
