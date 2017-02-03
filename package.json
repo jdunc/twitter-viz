@@ -1,11 +1,47 @@
 {
-  "name": "twitter",
+  "name": "twitter-viz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdunc/twitter-viz.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdunc/twitter-viz/issues"
+  },
+  "homepage": "https://github.com/jdunc/twitter-viz#readme",
+  "dependencies": {
+    "bcrypt-as-promised": "^1.1.0",
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
+    "express-form-data": "^1.0.1",
+    "knex": "^0.12.6",
+    "mocha": "^3.2.0",
+    "multer": "^1.2.1",
+    "pg": "^6.1.2",
+    "superagent": "^3.3.1",
+    "superagent-no-cache": "^0.1.0",
+    "superagent-prefix": "0.0.2",
+    "supertest": "^2.0.1",
+    "then-fs": "^2.0.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
+  }
 }
