@@ -1,52 +1,23 @@
-#Data Visualization (Twitter and Twitch)
-#Developed By:
-* <a href="http://www.github.com/SuzanneRashka" target="blank">Suzanne Rashka</a>
-* <a href="http://www.github.com/rallyjinx" target="blank">Rally Jinx</a>
-* <a href="http://www.github.com/Metatronius" target="blank">Paul Lederer</a>
-* <a href="http://www.github.com/shahzadkhan3iii7" target="blank">Shahzad Khan</a>
-* <a href="http://www.github.com/Stigeweard" target="blank">Charles Harding</a>
-* <a href="http://www.github.com/jdunc" target="blank">Jordan DUncan</a>
-##One Liner
-The goal of this project is to create an interactive visualization with live streams of data.
+# Data Visualization (Twitter and Twitch)
+# Developed By:
+* <a href="http://www.github.com/SuzanneRashka" target="blank">Suzanne Rashka - Role</a>
+* <a href="http://www.github.com/rallyjinx" target="blank">Rally Jinx - Role</a>
+* <a href="http://www.github.com/Metatronius" target="blank">Paul Lederer - Role</a>
+* <a href="http://www.github.com/shahzadkhan3iii7" target="blank">Shahzad Khan - Role</a>
+* <a href="http://www.github.com/Stigeweard" target="blank">Charles Harding - Role</a>
+* <a href="http://www.github.com/jdunc" target="blank">Jordan Duncan - Role</a>
 
+## Description
+The goal of this project is to create an interactive visualization with live streams of data.  Specifically, one aspect of the project is to make sense of the massive amounts of chats that occur during a Twitch Live Stream.  Another aspect is to create a user friendly experience to interact with a twitter feed by posting/viewing feeds as well as deriving greater insights through visualizations about specific topics such as:
+* common word associations
+* sentiment of topic
+* popular location of topic
 
-## Group Members, Github Usernames, and Focus/Role at beginning of Project.
+## Intended Users
+The target audience of this project is on the one hand anyone who views popular Twitch streams and on the other hand anyone who wants to perceive an added layer of meaning within the Twittersphere.
 
-
-## Project/Application Name
-
-
-## Project Description
-
-
-## Who uses it?
-
-
-## What outputs do they need?
-
-
-## What inputs are needed to generate those outputs?
-
-
-## What technologies do you plan to use?
-* List libraries/frameworks you plan to use
-
-## Feature list
-* List all features in priority order (including stretch features)
-
-## Link to Digital Copy of Wireframes for different views of Single Page Application
-
-
-## Link to Actively Managed Trello Scrum Board
-
-
-## Link to Github Repository
-
-
-## Link to Continuous Deployment Pipeline View
-
-
-## Link to Deployed Application
+## User Experience
+Users simply have to enter the url of a livestream on twitch or any topic for twitter to immediately receive visualizations.
 
 ##Libraries and Frameworks
 * <a href="" target="blank">Twitter</a>
@@ -55,14 +26,29 @@ The goal of this project is to create an interactive visualization with live str
 * <a href="" target="blank">Passport.js</a>
 * <a href="" target="blank">Hicharts</a>
 
----
-###KEY FEATURES
-* Make it modular
-* Flag significant events
+## Feature list
+* List all features in priority order (including stretch features)
+
+## Link to Digital Copy of Wireframes for different views of Single Page Application
+
+
+## Trello Scrum Board
+<a href="https://trello.com/b/eGPJPNvg/live-data-visualization" target="blank">Trello Board</a>
+
+https://trello.com/b/eGPJPNvg/live-data-visualization
+
+## Link to Github Repository
+<a href="https://github.com/jdunc/twitter-viz" target="blank">Data Visualization Repository</a>
+
+
+## Link to Continuous Deployment Pipeline View
+
+
+## Link to Deployed Application
 
 ---
 
-###USER STORIES FOR TWITCH
+### USER STORIES FOR TWITCH
 1. User can paste URL of stream of choice
 2. User can see most common chat messages in chart
 3. User can change range of data
@@ -71,7 +57,7 @@ The goal of this project is to create an interactive visualization with live str
 
 ---
 
-###USER STORIES FOR TWITTER
+### USER STORIES FOR TWITTER
 1. User can enter a topic #
 2. User can see all real time tweets with #
 3. User can filter by location
