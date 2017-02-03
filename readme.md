@@ -1,11 +1,11 @@
 # Data Visualization (Twitter and Twitch)
 # Developed By:
-* <a href="http://www.github.com/SuzanneRashka" target="blank">Suzanne Rashka - Role</a>
-* <a href="http://www.github.com/rallyjinx" target="blank">Rally Jinx - Role</a>
-* <a href="http://www.github.com/Metatronius" target="blank">Paul Lederer - Role</a>
-* <a href="http://www.github.com/shahzadkhan3iii7" target="blank">Shahzad Khan - Role</a>
-* <a href="http://www.github.com/Stigeweard" target="blank">Charles Harding - Role</a>
-* <a href="http://www.github.com/jdunc" target="blank">Jordan Duncan - Role</a>
+* <a href="http://www.github.com/SuzanneRashka" target="blank">Suzanne Rashka</a>- Role
+* <a href="http://www.github.com/rallyjinx" target="blank">Rally Jinx</a>- Role
+* <a href="http://www.github.com/Metatronius" target="blank">Paul Lederer</a>- Role
+* <a href="http://www.github.com/shahzadkhan3iii7" target="blank">Shahzad Khan</a>- Role
+* <a href="http://www.github.com/Stigeweard" target="blank">Charles Harding</a>- Role
+* <a href="http://www.github.com/jdunc" target="blank">Jordan Duncan</a>- Role
 
 ## Description
 The goal of this project is to create an interactive visualization with live streams of data.  Specifically, one aspect of the project is to make sense of the massive amounts of chats that occur during a Twitch Live Stream.  Another aspect is to create a user friendly experience to interact with a twitter feed by posting/viewing feeds as well as deriving greater insights through visualizations about specific topics such as:
