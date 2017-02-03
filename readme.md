@@ -26,9 +26,9 @@
 ---
 
 ##Research Goals
- *Twitter API
- *Twitch API
- *D3JS/Hicharts
- *Visualization Methods/Frameworks
- 
+* Twitter API
+* Twitch API
+* D3JS/Hicharts
+* Visualization Methods/Frameworks
+
 ---
