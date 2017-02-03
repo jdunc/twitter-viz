@@ -2,6 +2,8 @@ var express = require('express');
 var passport = require('passport');
 var Strategy = require('passport-twitter').Strategy;
 require('dotenv').config();
+const port = process.env.PORT || 8000;
+
 
 
 // Configure the Twitter strategy for use by Passport.
