@@ -44,6 +44,8 @@ Users simply have to enter the url of a livestream on twitch or any topic for tw
 
 
 ## Link to Deployed Application
+<a href="https://data-vizualization.herokuapp.com/" target="blank">HerokuApp</a>
+
 
 ---
 
