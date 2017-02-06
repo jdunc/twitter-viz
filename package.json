@@ -29,6 +29,7 @@
     "express-fileupload": "0.0.5",
     "express-form-data": "^1.0.1",
     "express-session": "^1.15.0",
+    "irc": "^0.5.2",
     "knex": "^0.12.6",
     "mocha": "^3.2.0",
     "morgan": "^1.7.0",
@@ -42,6 +43,7 @@
     "superagent-prefix": "0.0.2",
     "supertest": "^2.0.1",
     "then-fs": "^2.0.0",
+    "tmi.js": "^1.1.2",
     "twitter": "^1.7.0"
   },
   "devDependencies": {
