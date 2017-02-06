@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "passport": "^0.3.2",
     "passport-twitter": "^1.0.4",
     "pg": "^6.1.2",
+    "request": "^2.79.0",
     "superagent": "^3.3.1",
     "superagent-no-cache": "^0.1.0",
     "superagent-prefix": "0.0.2",

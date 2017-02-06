@@ -50,6 +50,8 @@ passport.deserializeUser(function(obj, cb) {
 // Create a new Express application.
 var app = express();
 
+app.use(express.static('public'));
+
 // Configure view engine to render EJS templates.
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -72,6 +74,8 @@ app.use(require('express-session')({
 app.use(passport.initialize());
 app.use(passport.session());
 
+const twitch = require('./routes/twitch');
+app.use('/twitch', twitch);
 
 // Define routes.
 app.get('/',
