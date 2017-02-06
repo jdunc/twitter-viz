@@ -20,10 +20,8 @@ router.get('/response', (req, res, next) => {
     }, (err, httpResponse, body) => {
         console.log('clients access token!!!!!! ', JSON.parse(body).access_token);
 
+        res.render('tempTwitch');
     });
-
-    res.render('tempTwitch');
-
 })
 
 
