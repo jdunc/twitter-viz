@@ -105,6 +105,12 @@ app.get('/profile',
         });
     });
 
+app.get('/testingTwitterAuth', function(req, res) {
+
+});
+
+
+
 app.listen(port);
 
 console.log('server here');
