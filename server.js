@@ -5,6 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT || 8000;
 const signInRoute = require('./routes/signIn');
 const getTweets = require('./routes/getTweets');
+const twitch = require('./routes/twitch');
 
 
 // Configure the Twitter strategy for use by Passport. All this commented out code is for user login, maybe don't need at all in our app
@@ -72,73 +73,12 @@ const getTweets = require('./routes/getTweets');
 // app.use(passport.session());
 // app.use(signInRoute);
 
+
 var app = express();
-app.use(getTweets);
-
-
-app.use(express.static('public'));
-
-// Configure view engine to render EJS templates.
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-
-// Use application-level middleware for common functionality, including
-// logging, parsing, and session handling.
-app.use(require('morgan')('combined'));
-app.use(require('cookie-parser')());
-app.use(require('body-parser').urlencoded({
-    extended: true
-}));
-app.use(require('express-session')({
-    secret: 'keyboard cat',
-    resave: true,
-    saveUninitialized: true
-}));
-
-// Initialize Passport and restore authentication state, if any, from the
-// session.
-app.use(passport.initialize());
-app.use(passport.session());
-
-const twitch = require('./routes/twitch');
+app.use(getTweets);
 app.use('/twitch', twitch);
-
-// Define routes.
-app.get('/',
-    function(req, res) {
-        res.render('home', {
-            user: req.user
-        });
-    });
-
-app.get('/login',
-    function(req, res) {
-        res.render('login');
-    });
-
-app.get('/login/twitter',
-    passport.authenticate('twitter'));
-
-app.get('/login/twitter/return',
-    passport.authenticate('twitter', {
-        failureRedirect: '/login'
-    }),
-    function(req, res) {
-        res.redirect('/');
-    });
-
-app.get('/profile',
-    require('connect-ensure-login').ensureLoggedIn(),
-    function(req, res) {
-        res.render('profile', {
-            user: req.user
-        });
-    });
-
-app.get('/testingTwitterAuth', function(req, res) {
-
-});
-
 
 
 app.listen(port);
