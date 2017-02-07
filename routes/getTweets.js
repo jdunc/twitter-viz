@@ -21,17 +21,40 @@ app.get('/getTweets/:search', function(req, res) {
     var path = 'search/tweets.json'
         //params are the values to url encode when hitting the twitter endpoint
     var params = {
-            q: req.params.search,
-            count: 100
-        }
+        q: req.params.search,
+        count: 100,
+    }
+    var count = 1;
+    var obj = {};
+    getTweets(path, params, count, obj);
+
+    function getTweets(path, params, count, obj) {
         //this is the twitter module's method of hitting the endpoint and returning the results
-    client.get(path, params, function(error, tweets, response) {
-        if (error) throw error;
-        var obj = {};
-        obj.tweets = tweets;
-        obj.response = response;
-        res.send(obj);
-    });
+        client.get(path, params, function(error, tweets, response) {
+            if (error) throw error;
+            var max_id = tweets.search_metadata.max_id_str;
+            var since_id = tweets.statuses[99].id_str;
+            if (!params.max_id || max_id > params.max_id) {
+                params.max_id = max_id;
+            }
+            if (!params.since_id || since_id < params.since_id) {
+                params.since_id = since_id;
+            }
+            if (count === 1) {
+                obj.tweets = tweets;
+                obj.response = response;
+                getTweets(path, params, count, obj);
+                console.log('p1', params);
+                count++;
+            }
+            if (count === 2) {
+                obj.tweets2 = tweets;
+                obj.response2 = response;
+                console.log('p2', params);
+                res.send(obj);
+            }
+        }); //end of client.get
+    }
 
     //stream is an alternate method to receive tweets by updating periodically when new tweets are released, very slow for development, don't understand it's usefulness for us
     // var stream = client.stream('statuses/filter', {
