@@ -5,6 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT || 8000;
 const signInRoute = require('./routes/signIn');
 const getTweets = require('./routes/getTweets');
+const twitch = require('./routes/twitch');
 
 
 // Configure the Twitter strategy for use by Passport. All this commented out code is for user login, maybe don't need at all in our app
@@ -76,6 +77,7 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(getTweets);
+app.use('/twitch', twitch);
 
 
 
