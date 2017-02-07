@@ -5,9 +5,14 @@
 }
 
 .flexme iframe {
-    position: absolute;;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+.input-group {
+    padding-bottom: 5%;
+    position: relative;
+    align: center;
 }
