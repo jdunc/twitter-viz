@@ -2,9 +2,9 @@
 
 const express = require('express');
 const app = express.Router();
-let Twitter = require('twitter');
+const Twitter = require('twitter');
 //store all the verifications in a .env file, receive keys and secrets by creating an app at https://apps.twitter.com/
-let client = new Twitter({
+const client = new Twitter({
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
     access_token_key: process.env.ACCESS_TOKEN_KEY,
@@ -39,26 +39,18 @@ app.get('/getTweets/:search', function(req, res) {
                 obj.response = response;
                 count++;
                 getTweets(path, params, count, obj);
-                // console.log('p1', params);
-                // console.log(max_id, since_id);
             } else if (count <= maxCount) {
                 obj.tweets.statuses.push(tweets.statuses);
                 let responseName = `response${count}`;
                 obj[responseName] = response;
-                // console.log('length', obj.tweets.length);
-                // console.log('p2', params);
-                // console.log(max_id, since_id);
                 if (count === maxCount) {
                     let tweetsArray = [];
                     obj.tweets.statuses.forEach(function(item, index) {
                         tweetsArray.push(item.text);
                     });
                     let allTweetsText = tweetsArray.join(' ');
-                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ");
-                    allTweetsParsed = allTweetsParsed.replace(/@\w*:*?/g, "");
-                    allTweetsParsed = allTweetsParsed.replace(/ RT /g, " ");
+                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
-
                     res.send(obj);
                 } else {
                     count++;
