@@ -1,6 +1,6 @@
 (function(){
 const token = JSON.parse(docCookies.getItem('token').substr(2)).access_token;
-const username = $.ajax('https://api.twitch.tv/kraken/user',
+$.ajax('https://api.twitch.tv/kraken/user',
 {
   headers:
   {
@@ -8,9 +8,10 @@ const username = $.ajax('https://api.twitch.tv/kraken/user',
     'Authorization': `OAuth ${token}`,
     'Client-ID': 'ipr78n41sqd6fqbacj2gykwv5lxpnd',
   }
-}).done((data)=>console.log(data, 'yay'););//this needs be the username
+}).done((data)=>{
+const username = data.name;
 const password = 'oauth:' + token;
-const channel = twitch.channel;//this needs to be the channel name
+const channel = data.name;//this needs to be the channel name
 const options =
 {
     options: {
@@ -39,5 +40,5 @@ client.on('message', (channel, userstate, message, self) => {
             // Something else ?
             break;
     }
-});
+});}
 }())
