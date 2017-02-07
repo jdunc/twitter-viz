@@ -1,6 +1,7 @@
-const tmi = require('tmi.js');
-const twitch = require('../hidden/twitch');
-const fs = require('fs');
+const tmi = require('tmi.js');//will need to be removed before production
+const twitch = require('../hidden/twitch');//this is where we are getting info
+const LocalStorage = require('node-localstorage').LocalStorage;//remove this before production
+sessionStorage = new LocalStorage('./scratch');//remove this too
 const username = twitch.username;
 const oauthKey = twitch.oauthKey;
 const channel = twitch.channel;
@@ -31,11 +32,7 @@ client.on('message', (channel, userstate, message, self) => {
             break;
         case "chat":
             messages.push(message)
-            fs.writeFile('./data.txt', messages, (err)=>{
-              if(err){
-                return console.log(err);
-              }
-            })
+            sessionStorage.setItem('messages', messages);
             // This is a chat message..
             break;
         case "whisper":
