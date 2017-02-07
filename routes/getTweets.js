@@ -55,8 +55,8 @@ app.get('/getTweets/:search', function(req, res) {
                     });
                     let allTweetsText = tweetsArray.join(' ');
                     let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ");
-                    let allTweetsParsed = allTweetsParsed.replace(/@\w*:*?/g, "");
-                    let allTweetsParsed = allTweetsParsed.replace(/ RT /g, " ");
+                    allTweetsParsed = allTweetsParsed.replace(/@\w*:*?/g, "");
+                    allTweetsParsed = allTweetsParsed.replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
 
                     res.send(obj);
