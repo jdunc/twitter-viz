@@ -9,7 +9,10 @@ body {
 	overflow-y: scroll;
 	background: #333;
 }
-
+.formInfo{
+	text-align: center;
+	font-size: large;
+}
 .splitlayout {
 	position: relative;
 	overflow-x: hidden;
