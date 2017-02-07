@@ -35,8 +35,7 @@ app.get('/getTweets/:search', function(req, res) {
             var max_id = tweets.search_metadata.max_id;
             var lastTweetIndex = tweets.statuses.length - 1;
             var since_id = tweets.statuses[lastTweetIndex].id;
-            console.log("status99", tweets.statuses[0].id);
-            console.log('length', tweets.statuses.length);
+            //add these paramateres max_id and since_id so that future searches don't return the same tweets
             params.max_id = max_id;
             params.since_id = since_id;
             if (count === 1) {
@@ -44,15 +43,14 @@ app.get('/getTweets/:search', function(req, res) {
                 obj.response = response;
                 count++;
                 getTweets(path, params, count, obj);
-                console.log('p1', params);
-                console.log(max_id, since_id);
+                // console.log('p1', params);
+                // console.log(max_id, since_id);
             } else if (count === 2) {
                 obj.tweets.statuses.push(tweets.statuses);
-                // obj.tweets2 = tweets;
                 obj.response2 = response;
-                console.log('length', obj.tweets.length);
-                console.log('p2', params);
-                console.log(max_id, since_id);
+                // console.log('length', obj.tweets.length);
+                // console.log('p2', params);
+                // console.log(max_id, since_id);
                 res.send(obj);
             }
         }); //end of client.get
