@@ -89,23 +89,25 @@ body {
 .profile1 img {
 	max-width: 110%;
 	border-radius: 50%;
-	opacity: 0.9;
+	opacity: 1.5;
 }
 
 .profile2 img {
 	max-width: 80%;
 	border-radius: 50%;
-	opacity: 0.9;
+	opacity: 1.0;
 }
 
 .intro-content h1 > span {
 	display: block;
 	white-space: nowrap;
+
 }
 
 .intro-content h1 > span:first-child {
 	font-weight: 300;
 	font-size: 2em;
+	/*position: relative;*/
 }
 
 .intro-content h1 > span:nth-child(2) {
@@ -118,17 +120,19 @@ body {
 }
 
 .intro-content h1 > span:nth-child(2):before {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 25%;
 	width: 50%;
 	height: 2px;
-	background: #fff;
+	background: white;
 	content: '';
 }
 
 .side-right .intro-content h1 > span:nth-child(2):before {
-	background: #47a3da;
+	background: green;
+
+
 }
 
 .back {
@@ -136,7 +140,7 @@ body {
 	top: 2.6em;
 	z-index: 500;
 	display: block;
-	visibility: hidden;
+	visibility:visible;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -145,7 +149,7 @@ body {
 	font-size: 22px;
 	line-height: 44px;
 	opacity: 0;
-	pointer-events: none;
+	pointer-events: fill;
 }
 
 .mobile-layout .back { /* fixed positioning will make this not clickable after scrolling on some mobile devices */
@@ -160,8 +164,8 @@ body {
 
 .back-right {
 	right: 12.5%;
-	-webkit-transform: translateX(50%);
-	transform: translateX(50%);
+	-webkit-transform: translateX(1000%);
+	transform: translateX(100%);
 	color: #fff;
 }
 
@@ -204,7 +208,7 @@ body {
 }
 
 .page-left {
-	left: 0;
+	left: 0%;
 	outline: 5px solid #34495e; /* avoid rounding gaps */
 	background: #34495e;
 	color: #fff;
@@ -260,6 +264,8 @@ body {
 	transition: opacity 0.3s;
 }
 
+
+
 /* Open and close */
 
 /* We need to set the position and overflow for the respective page scroll */
@@ -296,8 +302,8 @@ body {
 
 .open-right .side-right {
 	z-index: 200;
-	-webkit-transform: translateX(-150%);
-	transform: translateX(-150%);
+	-webkit-transform: translateX(-160%);
+	transform: translateX(-160%);
 }
 
 .close-right .side-right {
@@ -310,20 +316,20 @@ body {
 }
 
 .open-right .page-right {
-	-webkit-transform: translateX(0%);
-	transform: translateX(0%);
+	-webkit-transform: translateX(20%);
+	transform: translateX(20%);
 }
 
 /* Left side open */
 .open-left .side-right {
-	-webkit-transform: translateX(60%);
-	transform: translateX(60%);
+	-webkit-transform: translateX(75%);
+	transform: translateX(75%);
 }
 
 .open-left .side-left {
 	z-index: 200;
-	-webkit-transform: translateX(150%);
-	transform: translateX(150%);
+	-webkit-transform: translateX(175%);
+	transform: translateX(175%);
 }
 
 .close-left .side-left {
@@ -402,8 +408,8 @@ body {
 
 	.open-left .side-left .intro-content {
 		top: 100%;
-		-webkit-transform: translateY(-150px) translateX(-87.5%) scale(0.5);
-		transform: translateY(-150px) translateX(-87.5%) scale(0.5);
+		-webkit-transform: translateY(-150px) translateX(-88.5%) scale(0.5);
+		transform: translateY(-150px) translateX(-88.5%) scale(0.5);
 	}
 
 	.open-right .intro-content h1,
