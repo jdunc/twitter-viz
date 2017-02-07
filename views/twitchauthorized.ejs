@@ -12,7 +12,6 @@
     <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
     <link rel="stylesheet" type="text/css" href="/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="/css/component.css" />
-    <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
     <script src="/js/modernizr.custom.js"></script>
 
     <!-- Twitch scripts  -->
@@ -23,9 +22,6 @@
     <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
     <script src="/twitch/skimmer.js"></script>
 
-
-    </script>
-
     <!-- Twitter scripts -->
 
 
@@ -33,7 +29,7 @@
 
 <body>
     <div class="container">
-        <div id="splitlayout" class="splitlayout">
+        <div id="splitlayout" class="splitlayout open-left">
             <div class="intro">
                 <div class="side side-left">
                     <header class="codropsheader clearfix">
@@ -70,19 +66,17 @@
             <!-- /page-right -->
             <div class="page page-left">
                 <div class="page-inner">
+                    <h3>Twitch Data-visualization</h3>
+                    <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
                     <section>
-                        <h2>Twitch</h2>
+                <div>
 
-                        <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
-
-                        <div>
-                            <label for="basic-url">Paste your Twitch URL here</label>
-                              <div class="input-group container" style="width:50%">
+                              <div class="input-group container" style="width:150%" align="center">
                                <span class="input-group-addon" id="basic-addon3">Channel Name:</span>
-                               <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                               <input type="text" class="form-control" id="basic-url" style="width:60%" aria-describedby="basic-addon3">
                               </div>
                           </div>
-                        <div class="flexme container">
+                        <div class="flexme">
                             <iframe src="http://player.twitch.tv/?channel=metatronius" height="400" width="750" frameborder="0" scrolling="no" allowfullscreen="true">
                                 </iframe>
                             <iframe frameborder="0" scrolling="no" id="chat_embed" src="http://www.twitch.tv/metatronius/chat" height="400" width="300">
