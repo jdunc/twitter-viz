@@ -5,7 +5,7 @@ const router = express.Router();
 const request = require('request');
 
 router.get('/', (req, res, next) => {
-    res.render('tempTwitch');
+    res.render('Twitch/twitch');
 });
 
 router.get('/response', (req, res, next) => {
@@ -19,8 +19,10 @@ router.get('/response', (req, res, next) => {
         }
     }, (err, httpResponse, body) => {
         console.log(JSON.parse(body).access_token);
-        res.cookie('token', {'access_token': JSON.parse(body).access_token});
-        res.render('tempTwitch');
+        res.cookie('token', {
+            'access_token': JSON.parse(body).access_token
+        });
+        res.render('Twitch/twitch');
     });
 })
 
