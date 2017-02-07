@@ -18,8 +18,8 @@ router.get('/response', (req, res, next) => {
             'code': req.query.code
         }
     }, (err, httpResponse, body) => {
-        console.log('clients access token!!!!!! ', JSON.parse(body).access_token);
-
+        console.log(JSON.parse(body).access_token);
+        res.cookie('token', {'access_token': JSON.parse(body).access_token});
         res.render('tempTwitch');
     });
 })
