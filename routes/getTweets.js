@@ -5,10 +5,10 @@ const app = express.Router();
 const Twitter = require('twitter');
 //store all the verifications in a .env file, receive keys and secrets by creating an app at https://apps.twitter.com/
 const client = new Twitter({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    access_token_key: process.env.ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 //this is an express route that will return tweets given a specific search term passed in the url
 app.get('/getTweets/:search', function(req, res) {
