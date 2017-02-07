@@ -32,25 +32,27 @@ app.get('/getTweets/:search', function(req, res) {
         //this is the twitter module's method of hitting the endpoint and returning the results
         client.get(path, params, function(error, tweets, response) {
             if (error) throw error;
-            var max_id = tweets.search_metadata.max_id_str;
-            var since_id = tweets.statuses[99].id_str;
-            if (!params.max_id || max_id > params.max_id) {
-                params.max_id = max_id;
-            }
-            if (!params.since_id || since_id < params.since_id) {
-                params.since_id = since_id;
-            }
+            var max_id = tweets.search_metadata.max_id;
+            var lastTweetIndex = tweets.statuses.length - 1;
+            var since_id = tweets.statuses[lastTweetIndex].id;
+            console.log("status99", tweets.statuses[0].id);
+            console.log('length', tweets.statuses.length);
+            params.max_id = max_id;
+            params.since_id = since_id;
             if (count === 1) {
                 obj.tweets = tweets;
                 obj.response = response;
+                count++;
                 getTweets(path, params, count, obj);
                 console.log('p1', params);
-                count++;
-            }
-            if (count === 2) {
-                obj.tweets2 = tweets;
+                console.log(max_id, since_id);
+            } else if (count === 2) {
+                obj.tweets.statuses.push(tweets.statuses);
+                // obj.tweets2 = tweets;
                 obj.response2 = response;
+                console.log('length', obj.tweets.length);
                 console.log('p2', params);
+                console.log(max_id, since_id);
                 res.send(obj);
             }
         }); //end of client.get
