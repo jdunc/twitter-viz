@@ -25,7 +25,7 @@ client.on('message', (channel, userstate, message, self) => {
     switch(userstate["message-type"]) {
         case "chat":
             messages.push(message)
-            sessionStorage.setItem('messages', messages);
+            sessionStorage.setItem('twitchMessages', messages);
         default:
             // Something else ?
             break;
