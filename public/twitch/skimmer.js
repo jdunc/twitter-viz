@@ -17,9 +17,16 @@
             }
         })
     ]).then((values) => {
-        loadFeaturedStream(values);
+        let topStream = values[1].featured;
+        console.log(topStream);
+        topStream.sort((a, b) =>{
+          return b.stream.viewers - a.stream.viewers
+        })
+        console.log(topStream);
+        loadFeaturedStream(topStream);
+
         // call function to embed featured stream in front end
-        chatSkimmer(values[0].name, values[1].featured[0].stream.channel.name,
+        chatSkimmer(values[0].name, topStream[0].stream.channel.name,
             token);
     })
 
