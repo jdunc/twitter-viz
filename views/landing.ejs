@@ -60,8 +60,10 @@
                 <div class="page-inner">
                     <section>
                         <h2>Twitter</h2>
-                        <input type="text" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
-                        <input type="submit" style="width: 5vw; height:100px;"></input>
+                        <form id="twitter-form" action="/getTweets/search" method="GET">
+                          <input type="text" name="tweet-search" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
+                          <input type="submit" style="width: 5vw; height:100px;"></input>
+                        </form>
                     </section>
                     <twitter></twitter>
 
