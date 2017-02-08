@@ -8,7 +8,7 @@
         messageIndex = messages.length;
     }
 
-    setInterval(chatGrabber, 30000);
+    setInterval(chatGrabber, 5000);
 
 
 
