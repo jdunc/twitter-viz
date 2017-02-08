@@ -23,7 +23,7 @@ app.get('/getTweets/:search', function(req, res) {
     let obj = {};
     getTweets(path, params, count, obj);
 
-    function getTweets(path, params, count, obj) {
+    function getTweets(path, params, count, obj, tweetStatuses) {
         //this is the twitter module's method of hitting the endpoint and returning the results
         client.get(path, params, function(error, tweets, response) {
             if (error) throw error;
@@ -35,23 +35,29 @@ app.get('/getTweets/:search', function(req, res) {
             params.max_id = max_id;
             params.since_id = since_id;
             if (count === 1) {
+                //add the results from the twitter api call to "obj" so that it can be stored between twitter api calls
                 obj.tweets = tweets;
                 obj.response = response;
                 count++;
-                getTweets(path, params, count, obj);
+                getTweets(path, params, count, obj, tweetStatuses);
             } else if (count <= maxCount) {
-                obj.tweets.statuses.push(tweets.statuses);
+                //add new results to existing results in object
+                obj.tweets.statuses.concat(tweets.statuses);
+                res.send(obj.tweets.statuses);
+                console.log(count, typeof tweets.statuses, obj.tweets.statuses.length);
                 let responseName = `response${count}`;
                 obj[responseName] = response;
                 if (count === maxCount) {
+                    // console.log('max', count, obj.tweets.statuses.length);
                     let tweetsArray = [];
                     obj.tweets.statuses.forEach(function(item, index) {
                         tweetsArray.push(item.text);
                     });
+                    //combine and clean the text of the tweets
                     let allTweetsText = tweetsArray.join(' ');
                     let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
-                    res.send(obj);
+                    // res.send(obj.text);
                 } else {
                     count++;
                     getTweets(path, params, count, obj);
