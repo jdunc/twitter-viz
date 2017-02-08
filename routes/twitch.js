@@ -18,11 +18,10 @@ router.get('/response', (req, res, next) => {
             'code': req.query.code
         }
     }, (err, httpResponse, body) => {
-        console.log(JSON.parse(body).access_token);
         res.cookie('token', {
             'access_token': JSON.parse(body).access_token
         });
-        res.render('twitchauthorized');
+        res.render('Twitch/twitchauthorized');
     });
 })
 
