@@ -15,7 +15,7 @@ body {
 }
 .splitlayout {
 	position: relative;
-	overflow-x: visible;
+	overflow-x: hidden;
 	min-height: 100%;
 	width: 100%;
 }
@@ -285,7 +285,7 @@ body {
 .splitlayout.close-right .page-left,
 .splitlayout.close-left .page-right {
 	position: absolute;
-	overflow: visible;
+	overflow: hidden;
 	height: 100%;
 }
 
