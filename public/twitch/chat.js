@@ -1,19 +1,22 @@
 (function() {
-    let messageIndex = 0;
-    function chatGrabber() {
-        let messages = JSON.parse(sessionStorage.getItem('twitchMessages'))
-        let recentMessages = messages.slice(messageIndex);
-        console.log(recentMessages);
+    function chatGrabber(timeRange) {
+        console.log('ja;lsdfkjalsdfja');
+        // when called, chatGrabber should return an array filled with messages that match the timeRange parameter (in miliseconds)
+        let messages = JSON.parse(sessionStorage.getItem('twitchMessages'));
+        if (messages !== null) {
+            let times = messages.map((elem)=>{
+                return elem.time
+            })
+            console.log(times[0]);
+        }
+
         // mapWordData(recentMessages)
-        messageIndex = messages.length;
     }
 
-    setInterval(chatGrabber, 5000);
-
-
-
-    function chatTimeGrabber() {
-        let messages = JSON.parse(sessionStorage.getItem('twitchMessages'))
-
-    }
+    let timeRange = 5000;
+    chatGrabber(timeRange)
+    setInterval(()=>{
+        console.log('in set interval');
+        chatGrabber(timeRange)
+    }, timeRange);
 }())
