@@ -7,5 +7,9 @@ router.get('/', (req, res, next) => {
     res.render('landing');
 });
 
+router.get('/twitter', (req, res, next) => {
+    res.render('twitter-d3');
+});
+
 
 module.exports = router;

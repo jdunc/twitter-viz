@@ -18,6 +18,7 @@ app.get('/getTweets/:search', function(req, res) {
     let params = {
         q: req.params.search,
         count: 100,
+        '-filter': 'retweets'
     }
     let count = 1;
     let obj = {};
@@ -26,14 +27,16 @@ app.get('/getTweets/:search', function(req, res) {
     function getTweets(path, params, count, obj, tweetStatuses) {
         //this is the twitter module's method of hitting the endpoint and returning the results
         client.get(path, params, function(error, tweets, response) {
-            if (error) throw error;
-            let max_id = tweets.search_metadata.max_id;
+            if (error) {
+                res.send('error!:', error);
+            };
+            let max_id = tweets.search_metadata.max_id_str;
             let lastTweetIndex = tweets.statuses.length - 1;
             let since_id = tweets.statuses[lastTweetIndex].id;
-            let maxCount = 2; //the total number of calls to api we want to make per search term
+            let maxCount = 20; //the total number of calls to api we want to make per search term
             //add these paramateres max_id and since_id so that future searches don't return the same tweets
-            params.max_id = max_id;
-            params.since_id = since_id;
+            params.max_id = tweets.statuses[lastTweetIndex].id_str;
+            // params.since_id = tweets.search_metadata.max_id_str;
             if (count === 1) {
                 //add the results from the twitter api call to "obj" so that it can be stored between twitter api calls
                 obj.tweets = tweets;
@@ -42,9 +45,9 @@ app.get('/getTweets/:search', function(req, res) {
                 getTweets(path, params, count, obj, tweetStatuses);
             } else if (count <= maxCount) {
                 //add new results to existing results in object
-                obj.tweets.statuses.concat(tweets.statuses);
-                res.send(obj.tweets.statuses);
-                console.log(count, typeof tweets.statuses, obj.tweets.statuses.length);
+                tweets.statuses.forEach(function(item, index) {
+                    obj.tweets.statuses.push(item);
+                });
                 let responseName = `response${count}`;
                 obj[responseName] = response;
                 if (count === maxCount) {
@@ -55,9 +58,10 @@ app.get('/getTweets/:search', function(req, res) {
                     });
                     //combine and clean the text of the tweets
                     let allTweetsText = tweetsArray.join(' ');
-                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
+                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "");
+                    // let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
-                    // res.send(obj.text);
+                    res.send(obj.text);
                 } else {
                     count++;
                     getTweets(path, params, count, obj);
