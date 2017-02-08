@@ -5,17 +5,24 @@ let wordFreq = {};
 // read text data file (will be sessionStorage IRL)
 // so will be reading it in differently... and it might be in a
 // different form...
-fs.readFile('./twitter_sample.txt', 'utf8', function (err, data) {
+fs.readFile('./unicorns2.txt', 'utf8', function (err, data) {
    if (err) {
       return console.error(err);
    }
+
   //convert data to string
   let str = data.toString();
   //strip punctuation
   let newStr = str.replace(/[&\/\\,+\(\)$~%\.!^'"\;:*?\[\]<>{}-]/g, '');
   //remove stopwords
   const arr = sw.removeStopwords(newStr.split(' '));
+  var wstream = fs.createWriteStream('data2.csv');
 
+  // for (var i = 0; i < arr.length; i++) {
+  //   wstream.write(arr[i]);
+  //   wstream.write(',\n');
+  // }
+  // wstream.end();
   //get word frequencies
   for (var i = 0; i < arr.length; i++) {
 
@@ -40,6 +47,13 @@ fs.readFile('./twitter_sample.txt', 'utf8', function (err, data) {
   // log the sorted list, reversed
   // will be the input for the d3 graphs
   console.log(sortable.reverse());
+
+  for (var i = 0; i < sortable.length; i++) {
+    wstream.write(sortable[i]);
+    wstream.write('\t');
+  }
+  wstream.end();
+
 
 
 });
