@@ -60,8 +60,12 @@
       // Handle different message types..
       if (userstate["message-type"] === 'chat') {
         messages = JSON.parse(sessionStorage.getItem('twitchMessages'));
-        messages.push(message);
-        sessionStorage.setItem('twitchMessages', JSON.stringify(messages));
+        messages.push({
+          message: message,
+          time: new Date()
+        });
+        sessionStorage.setItem(
+          'twitchMessages', JSON.stringify(messages));
       }
     });
   }
