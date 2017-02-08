@@ -16,12 +16,14 @@
     <script src="/js/modernizr.custom.js"></script>
 
     <!-- Twitch scripts  -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="/js/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/cookies.js"></script>
+    <!--[IF IE]><!-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <!--<![endif]-->
     <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
-    <script src="/twitch/skimmer.js"></script>
+    <script src="/js/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/skimmer.js" charset="utf-8"></script>
 
     <!-- Twitter scripts -->
 
@@ -36,6 +38,7 @@
                     <header class="codropsheader clearfix">
 
                         <h1><center>Data Viz</center></h1>
+                      </header>
 
 
                         <div class="intro-content">
@@ -68,7 +71,7 @@
             <div class="page page-left">
                 <div class="page-inner">
                     <h3>Twitch Data-visualization</h3>
-                    <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
+                    <!-- <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a> -->
                     <section>
                 <div>
 
