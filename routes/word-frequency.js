@@ -32,9 +32,7 @@ fs.readFile('./twitter_sample.txt', 'utf8', function (err, data) {
   // sort word frequencies highest to lowest
   var sortable = [];
   for (var word in wordFreq) {
-    if (word !== 'rt') { // or search term
-      sortable.push([word, wordFreq[word]])
-    }
+    sortable.push([word, wordFreq[word]])
   }
   sortable.sort(function(a, b) {
     return a[1] - b[1]
