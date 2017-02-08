@@ -69,6 +69,16 @@ body {
 	outline: 1px solid white; /* avoid gap */
 }
 
+.flexme {
+	left: auto;
+}
+
+
+
+
+
+
+
 /* Intro content, profile image and name, back button */
 .intro-content {
 	position: absolute;
@@ -174,7 +184,7 @@ body {
 
 .back-right {
 	right: 12.5%;
-	-webkit-transform: translateX(1000%);
+	-webkit-transform: translateX(100%);
 	transform: translateX(100%);
 	color: #fff;
 }
@@ -302,18 +312,19 @@ body {
 	opacity: 1;
 	-webkit-transition: opacity 0.6s;
 	transition: opacity 0.6s;
+
 }
 
 /* Right side open */
 .open-right .side-left {
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-60%);
+	transform: translateX(-60%);
 }
 
 .open-right .side-right {
 	z-index: 200;
-	-webkit-transform: translateX(-150%);
-	transform: translateX(-150%);
+	-webkit-transform: translateX(-160%);
+	transform: translateX(-160%);
 }
 
 .close-right .side-right {
@@ -321,8 +332,8 @@ body {
 }
 
 .open-right .side-right .intro-content {
-	-webkit-transform: translateY(-50%) translateX(0%) scale(0.6);
-	transform: translateY(-50%) translateX(0%) scale(0.6);
+	-webkit-transform: translateY(-50%) translateX(10%) scale(0.4);
+	transform: translateY(-50%) translateX(10%) scale(0.4);
 }
 
 .open-right .page-right {
@@ -332,14 +343,14 @@ body {
 
 /* Left side open */
 .open-left .side-right {
-	-webkit-transform: translateX(50%);
-	transform: translateX(50%);
+	-webkit-transform: translateX(60%);
+	transform: translateX(60%);
 }
 
 .open-left .side-left {
 	z-index: 200;
-	-webkit-transform: translateX(150%);
-	transform: translateX(150%);
+	-webkit-transform: translateX(160%);
+	transform: translateX(160%);
 }
 
 .close-left .side-left {
@@ -347,8 +358,8 @@ body {
 }
 
 .open-left .side-left .intro-content {
-	-webkit-transform: translateY(-50%) translateX(-100%) scale(0.6);
-	transform: translateY(-50%) translateX(-100%) scale(0.6);
+	-webkit-transform: translateY(-50%) translateX(-110%) scale(0.4);
+	transform: translateY(-50%) translateX(-110%) scale(0.4);
 }
 
 .open-left .codropsheader {
@@ -379,8 +390,8 @@ body {
 	}
 
 	.open-right .side-left {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
+		-webkit-transform: translateX(-110%);
+		transform: translateX(-110%);
 	}
 
 	.open-left .side-right {
@@ -419,8 +430,8 @@ body {
 
 	.open-left .side-left .intro-content {
 		top: 100%;
-		-webkit-transform: translateY(-150px) translateX(-88.5%) scale(0.5);
-		transform: translateY(-150px) translateX(-88.5%) scale(0.5);
+		-webkit-transform: translateY(-150px) translateX(-100%) scale(0.5);
+		transform: translateY(-150px) translateX(-100%) scale(0.5);
 	}
 
 	.open-right .intro-content h1,
