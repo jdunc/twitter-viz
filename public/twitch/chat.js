@@ -1,6 +1,9 @@
 (function() {
+    // every 1000 milliseconds (second parameter), startChatGrabLoop returns array of messages sent in past 5000 milliseconds (first parameter)
+    startChatGrabLoop(5000, 1000);
+
     function chatGrabber(timeRange) {
-        // when called, chatGrabber should return an array filled with messages that match the timeRange parameter (in miliseconds)
+        // when called, chatGrabber should return an array filled with messages that match the timeRange parameter (in milliseconds)
         let messages = JSON.parse(sessionStorage.getItem('twitchMessages')) || [];
         let times = messages.map((elem) => {
             return new Date(elem.time).getTime()
@@ -17,13 +20,24 @@
             }
         }
         console.log(lastMessages);
-        // mapWordData(recentMessages)
+        mapWordData(lastMessages)
     }
 
-    // every second, chatGrabber returns array of messages sent in past 5 seconds
-    let timeRange = 5000;
-    chatGrabber(timeRange)
-    setInterval(() => {
+    function startChatGrabLoop(timeRange, updateInterval) {
         chatGrabber(timeRange)
-    }, 1000);
+        setInterval(() => {
+            chatGrabber(timeRange)
+        }, updateInterval);
+    }
+
+    function mapWordData(messages) {
+        // messages is an array of most recent chat messages (as strings)
+        for (var i = 0; i < messages.length; i++) {
+            // if contains emote
+                // stuff
+            // else
+                // messages[i].toLowerCase()
+        }
+    }
+
 }())
