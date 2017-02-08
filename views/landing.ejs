@@ -41,15 +41,15 @@
                 <div class="side side-left">
                     <header class="codropsheader clearfix">
 
-                        <h1>Data Viz</h1>
+                        <h1>GREATNESS</h1>
 
                       </header>
 
 
                         <div class="intro-content">
                             <div class="profile1"><img src="/img/twitch.png" alt="profile1"></div>
-                            <h1><span>Twitch</span>
-                                <span>Data Visualization</span></h1>
+                            <h1><span></span>
+                                <span>Chat Visualization</span></h1>
                                 <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
                         </div>
                         <div class="overlay"></div>
@@ -57,8 +57,8 @@
                 <div class="side side-right">
                     <div class="intro-content">
                         <div class="profile2"><img src="/img/twitb.png" alt="profile2"></div>
-                        <h1><span>Twitter </span>
-                          <span>Data Visualization</span></h1>
+                        <h1><span></span>
+                          <span>Tweet Visualization</span></h1>
 
                     </div>
                     <div class="overlay"></div>
@@ -68,7 +68,7 @@
             <div class="page page-right">
                 <div class="page-inner">
                     <section>
-                        <h2>Twitter</h2>
+                        <h2>Twitter Tweet Visualization</h2>
                         <input type="text" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
                         <input type="submit" style="width: 5vw; height:100px;"></input>
                     </section>
@@ -80,7 +80,9 @@
             <!-- /page-right -->
             <div class="page page-left">
                 <div class="page-inner">
-                    <h3>Twitch Data-visualization</h3>
+                    <h2><center>Twitch Chat Visualization</center></h2>
+                    <input type="text" placeholder="Enter channel url/name here" frameborder="10" style="width: 40vw; height:50px; position:relative; left: -37%; top:-40%;" class="formInfo"></input>
+                    <input  type="submit" style="width: 5vw; height:50px; position:relative; left: -37%; top: 30%;" framborder="20" ></input>
 
                     <!-- <section>
                 <div>
@@ -91,7 +93,15 @@
                               </div>
                           </div>
                     </section> -->
+                    <div class="flexme">
+                        <iframe id="stream" src="http://player.twitch.tv/?channel=metatronius" height="450" width="900" frameborder="10" scrolling="no" allowfullscreen="true" style="position:relative; top: 10%; left: -15.7%;">
+                            </iframe>
+                        <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="http://www.twitch.tv/metatronius/chat" height="450" width="300" style="position: relative; left: -15.6%; top: 10%;" frameborder="3">
+                            </iframe>
+                    </div>
 
+                    <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="400" width="450" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative; left:-69.28%;">
+                        </iframe>
 
 
 

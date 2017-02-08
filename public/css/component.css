@@ -124,6 +124,7 @@ body {
 	font-weight: 300;
 	font-size: 2em;
 	position: reset-layout;
+	top: -75%;
 
 }
 
@@ -135,14 +136,15 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 0.8em;
+	top: -150%;
 }
 
 .intro-content h1 > span:nth-child(2):before {
 	position: absolute;
-	top: 0;
+	top: -100%;
 	left: 25%;
 	width: 50%;
-	height: 2px;
+	height: 6px;
 	background: white;
 	content: '';
 
