@@ -54,10 +54,12 @@
     };
     const client = new tmi.client(options);
     client.connect();
-    let messages = [];
+    let messages;
+    sessionStorage.setItem('twitchMessages', JSON.stringify([]))
     client.on('message', (channel, userstate, message, self) => {
       // Handle different message types..
       if (userstate["message-type"] === 'chat') {
+        messages = JSON.parse(sessionStorage.getItem('twitchMessages'));
         messages.push(message);
         sessionStorage.setItem('twitchMessages', JSON.stringify(messages));
       }
