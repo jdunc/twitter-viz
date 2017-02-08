@@ -20,7 +20,7 @@
             }
         }
         console.log(lastMessages);
-        mapWordData(lastMessages)
+        mapWordData(lastMessages);
     }
 
     function startChatGrabLoop(timeRange, updateInterval) {
