@@ -15,7 +15,7 @@ body {
 }
 .splitlayout {
 	position: relative;
-	overflow-x: hidden;
+	overflow-x: visible;
 	min-height: 100%;
 	width: 100%;
 }
@@ -82,17 +82,18 @@ body {
 }
 
 .profile {
-	margin: 0 auto;
+	margin: auto;
 	width: 140px;
 	height: 140px;
 	border-radius: 50%;
 	background: #47a3da;
+
 }
 
 .profile1 img {
 	max-width: 110%;
 	border-radius: 50%;
-	opacity: 1.5;
+	opacity: 1.0;
 }
 
 .profile2 img {
@@ -101,39 +102,45 @@ body {
 	opacity: 1.0;
 }
 
+
 .intro-content h1 > span {
-	display: block;
+	display: inline-block;
 	white-space: nowrap;
+	position: relative;
 
 }
 
 .intro-content h1 > span:first-child {
 	font-weight: 300;
 	font-size: 2em;
-	/*position: relative;*/
+	position: reset-layout;
+
 }
+
 
 .intro-content h1 > span:nth-child(2) {
 	position: relative;
 	margin-top: 0.5em;
-	padding: 0.8em;
+	padding: 0.5em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 0.8em;
 }
 
 .intro-content h1 > span:nth-child(2):before {
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 25%;
 	width: 50%;
 	height: 2px;
 	background: white;
 	content: '';
+
 }
 
 .side-right .intro-content h1 > span:nth-child(2):before {
-	background: green;
+	background: white;
+
 
 
 }
@@ -278,7 +285,7 @@ body {
 .splitlayout.close-right .page-left,
 .splitlayout.close-left .page-right {
 	position: absolute;
-	overflow: hidden;
+	overflow: visible;
 	height: 100%;
 }
 
@@ -299,14 +306,14 @@ body {
 
 /* Right side open */
 .open-right .side-left {
-	-webkit-transform: translateX(-60%);
-	transform: translateX(-60%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .open-right .side-right {
 	z-index: 200;
-	-webkit-transform: translateX(-160%);
-	transform: translateX(-160%);
+	-webkit-transform: translateX(-150%);
+	transform: translateX(-150%);
 }
 
 .close-right .side-right {
@@ -325,14 +332,14 @@ body {
 
 /* Left side open */
 .open-left .side-right {
-	-webkit-transform: translateX(75%);
-	transform: translateX(75%);
+	-webkit-transform: translateX(50%);
+	transform: translateX(50%);
 }
 
 .open-left .side-left {
 	z-index: 200;
-	-webkit-transform: translateX(175%);
-	transform: translateX(175%);
+	-webkit-transform: translateX(150%);
+	transform: translateX(150%);
 }
 
 .close-left .side-left {
@@ -401,6 +408,7 @@ body {
 
 	.intro-content {
 		width: 100%;
+
 	}
 
 	.open-right .side-right .intro-content {

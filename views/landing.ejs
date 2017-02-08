@@ -16,12 +16,15 @@
     <script src="/js/modernizr.custom.js"></script>
 
     <!-- Twitch scripts  -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="/js/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/cookies.js"></script>
+    <!--[IF IE]><!-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <!--<![endif]-->
     <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
-    <script src="/twitch/skimmer.js"></script>
+    <script src="/twitch/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/skimmer.js" charset="utf-8"></script>
+
 
 
     </script>
@@ -38,19 +41,25 @@
                 <div class="side side-left">
                     <header class="codropsheader clearfix">
 
-                        <h1><center>Data Viz</center></h1>
+                        <h1>Data Viz</h1>
+
+                      </header>
 
 
                         <div class="intro-content">
                             <div class="profile1"><img src="/img/twitch.png" alt="profile1"></div>
-                            <h1><span>Twitch </span><span>Data Visualization</span></h1>
+                            <h1><span>Twitch</span>
+                                <span>Data Visualization</span></h1>
+                                <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
                         </div>
                         <div class="overlay"></div>
                 </div>
                 <div class="side side-right">
                     <div class="intro-content">
                         <div class="profile2"><img src="/img/twitb.png" alt="profile2"></div>
-                        <h1><span>Twitter </span><span>Data Visualization</span></h1>
+                        <h1><span>Twitter </span>
+                          <span>Data Visualization</span></h1>
+
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -71,27 +80,18 @@
             <!-- /page-right -->
             <div class="page page-left">
                 <div class="page-inner">
+                    <h3>Twitch Data-visualization</h3>
+                    <!-- <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a> -->
                     <section>
-                        <h2>Twitch</h2>
+                <div>
 
-
-                        <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" /></a>
-
-                        <div>
-                            <label for="basic-url">Paste your Twitch URL here</label>
-                              <div class="input-group container" style="width:50%">
-                               <span class="input-group-addon" id="basic-addon3">Channel Name:</span>
-                               <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                              <div class="input-group container" align="center">
+                               <span class="input-group-addon" id="basic-addon3">Paste Channel Name Here:</span>
+                               <input type="text" class="form-control pad" id="basic-url" style="width:40%" aria-describedby="basic-addon3">
                               </div>
                           </div>
-                        <div class="flexme container">
-                            <iframe src="http://player.twitch.tv/?channel=metatronius" height="400" width="750" frameborder="0" scrolling="no" allowfullscreen="true">
-                                </iframe>
-                            <iframe frameborder="0" scrolling="no" id="chat_embed" src="http://www.twitch.tv/metatronius/chat" height="400" width="300">
-                                </iframe>
-                        </div>
                     </section>
-                    <twitch></twitch>
+
 
 
 
