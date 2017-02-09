@@ -12,7 +12,7 @@ const client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 //this is an express route that will return tweets given a specific search term passed in the url
-app.get('/getTweets/:search', function(req, res) {
+app.get('/getTweetData/:search', function(req, res) {
     //path is the twitter api endpoint you want to access, see all endpoints here: https://dev.twitter.com/rest/reference
     let path = 'search/tweets.json'
         //params are the values to url encode when hitting the twitter endpoint
@@ -62,7 +62,7 @@ app.get('/getTweets/:search', function(req, res) {
                     let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
                     let wordFrequencyObject = wordfrequency(obj.text);
-                    res.send(wordFrequencyObject);
+                    res.send(obj);
                 } else {
                     count++;
                     getTweets(path, params, count, obj);
