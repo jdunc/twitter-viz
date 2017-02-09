@@ -10,17 +10,14 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="wholePage" style="position: absolute">
-    <div style="width:400px; height:400px; position: absolute; background-color: white; top:0px;">
+    <div id="wholePage" style="position: absolute; z-index:5"></div>
+    <div id="wholePage2" style="position: absolute; z-index:4"></div>
+
+    <div style="width:400px; height:400px; position: absolute; background-color: white; top:0px; z-index:10">
       <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
   </div>
     <script>
     $(document).ready(function(){
-      $('body').click(
-        function(){
-          console.log('clicked!');
-        });
       let words = [];
       let freq = [];
       $.ajax({
@@ -32,6 +29,7 @@
         }
         for (let i = 0; i < results.images.length; i++) {
           $('#wholePage').append(`<div style="width:300px; height: 300px; overflow:hidden; background-image: url(${results.images[i]}); background-size: cover; float:left"></div>`)
+          $('#wholePage2').append(`<div style="width:300px; height: 300px; overflow:hidden; background-image: url(${results.images[i]}); background-size: cover; float:left"></div>`)
           // <img src="" style="height:300px; width:auto;">
         }
 
@@ -75,11 +73,34 @@
               }]
           }
       }
-  }); //chart created
+  }); //end of chart creation
+    setTimeout(animateUp2,12500);
     $('#wholePage').animate({
       top: -$('#wholePage').height()
-    }, 7000, function(){console.log('animated!');});
-        });
+    }, 15000, 'linear', function(){
+      $("#wholePage").css({ top: '0px', "z-index": 3 });
+    });//end of first animation
+    function animateUp2(){
+      setTimeout(animateUp, 12500);
+      $('#wholePage2').animate({
+        top: -$('#wholePage2').height()
+      }, 15000, 'linear',function(){
+        $("#wholePage").css({ top: '0px', "z-index": 4 });
+        $("#wholePage2").css({ top: '0px', "z-index": 3 });
+
+      });//end of animateUp2
+    }
+    function animateUp(){
+      setTimeout(animateUp2, 12500);
+      $('#wholePage').animate({
+        top: -$('#wholePage').height()
+      }, 15000, 'linear',function(){
+        $("#wholePage").css({ top: '0px', "z-index": 3 });
+        $("#wholePage2").css({ top: '0px', "z-index": 4 });
+      });//end of animateUp2
+    }
+
+  }); //end of ajax call
 
     })
 
