@@ -23,6 +23,7 @@ app.get('/getTweets/:search', function(req, res) {
     }
     let count = 1;
     let obj = {};
+    getTweets(path, params, count, obj);
 
     function getTweets(path, params, count, obj, tweetStatuses) {
         //this is the twitter module's method of hitting the endpoint and returning the results
@@ -33,7 +34,7 @@ app.get('/getTweets/:search', function(req, res) {
             let max_id = tweets.search_metadata.max_id_str;
             let lastTweetIndex = tweets.statuses.length - 1;
             let since_id = tweets.statuses[lastTweetIndex].id;
-            let maxCount = 20; //the total number of calls to api we want to make per search term
+            let maxCount = 3; //the total number of calls to api we want to make per search term
             //add these paramateres max_id and since_id so that future searches don't return the same tweets
             params.max_id = tweets.statuses[lastTweetIndex].id_str;
             // params.since_id = tweets.search_metadata.max_id_str;
@@ -58,16 +59,15 @@ app.get('/getTweets/:search', function(req, res) {
                     });
                     //combine and clean the text of the tweets
                     let allTweetsText = tweetsArray.join(' ');
-                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "");
-                    // let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
+                    let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
-                    res.send(obj.text);
+                    let wordFrequencyObject = wordfrequency(obj.text);
+                    res.send(wordFrequencyObject);
                 } else {
                     count++;
                     getTweets(path, params, count, obj);
                 }
             }
-
         }); //end of client.get
     }
     //stream is an alternate method to receive tweets by updating periodically when new tweets are released, very slow for development, don't understand it's usefulness for us
