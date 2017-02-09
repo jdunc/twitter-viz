@@ -1,4 +1,5 @@
 /*
+ * <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
  * <canvas id="myChart" width="400" height="400"></canvas>
  * PUT THIS HTML INTO WHERE WE WANT THE CHART TO BE
  */
