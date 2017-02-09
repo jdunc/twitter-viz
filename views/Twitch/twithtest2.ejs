@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Q3 Data Visualization</title>
-      <meta name="description" content="Q3 project" />
-      <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
-      <meta name="author" content="Codrops" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Q3 project" />
+    <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
+    <meta name="author" content="Codrops" />
+    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
 
-      <!-- Bootstrap core CSS -->
-      <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      <!-- Custom styles for this template -->
-      <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
+    <title>Q3 Test Page</title>
 
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
-      <link rel="stylesheet" type="text/css" href="/css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="/css/component.css" />
-      <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
-      <script src="/js/modernizr.custom.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
 
-      <script src="https://code.jquery.com/jquery.min.js"></script>
-      <!-- Latest compiled and minified CSS -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-      <!-- Twitch scripts  -->
-      <script src="/twitch/cookies.js"></script>
-      <!--[IF IE]><!-->
-      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-      <!--<![endif]-->
-      <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
-      <script src="/twitch/twitch.js" charset="utf-8"></script>
-      <script src="/twitch/skimmer.js" charset="utf-8"></script>
+    <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
+    <script src="/js/modernizr.custom.js"></script>
+
+
+
+
 
 
 
@@ -44,13 +40,12 @@
 
   <body>
 
-
   <!-- /container -->
     <div class="container">
         <div id="splitlayout" class="splitlayout open-left">
             <div class="intro">
                 <div class="side side-left">
-                    <header class="codropsheader clearfix" style="position:absolute">
+                    <header class="codropsheader clearfix" style="position:relative">
 
                         <h1>GREATNESS</h1>
 
@@ -135,12 +130,11 @@
                       <div class="row">
                         <div class="col-md-8 flexme">
                               <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
-                              </iframe>
+                                  </iframe>
 
                           </div>
-                          <div class="chat">
-                            <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
-                            </iframe>
+                          <div class="col-md-4 chat"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
+                              </iframe>
                               </div>
                         </div>
 
@@ -151,14 +145,15 @@
 
                       <div class="row">
                         <div class="col-sm-4 d3">
+                          <p>Visual 1</p>
+                          <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                              </iframe>
 
-                            <canvas class= "canvas" id="myChart" width="400px" height="400px"></canvas>
-                        </div>
-
-                        <div class="col-sm-4 d32"> <p>Visual 2</p> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                          </div>
+                          <div class="col-sm-4 d32"> <p>Visual 2</p> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
                           </iframe>
+                              </div>
                         </div>
-                      </div>
 
                     </div>
 
@@ -170,21 +165,25 @@
 
 
             <!-- /page-left -->
-            <a href="#" class="back back-right" title="back to intro">&rarr;</a>
-            <a href="#" class="back back-left" title="back to intro">&larr;</a>
+            <a href="/views/landing.ejs" class="back back-right" title="back to intro">&rarr;</a>
+            <a href="/views/landing.ejs" class="back back-left" title="back to intro">&larr;</a>
         </div>
         <!-- /splitlayout -->
     </div>
     <!-- /container -->
     <script src="/js/classie.js"></script>
     <script src="/js/cbpSplitLayout.js"></script>
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
-    <script src="/twitch/chartGenerate.js" charset="utf-8"></script>
+
+    <!-- Twitch scripts  -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/twitch/cookies.js"></script>
+    <!--[IF IE]><!-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <!--<![endif]-->
+    <script src="/cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+    <script src="/twitch/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/skimmer.js" charset="utf-8"></script>
     <script src="/twitch/chat.js" charset="utf-8"></script>
-
-
-
-
 
 
 

@@ -79,8 +79,8 @@ body {
 
 }
 .chat {
-  left: -8%;
-  top: -12.7%;
+  left: -15%;
+  top: -20%;
 }
 
 .d3 {
@@ -637,5 +637,9 @@ position: absolute;
 align-items: center;
 top: -3%;
 left: -3.5%;
+
+}
+
+.class {
 
 }
