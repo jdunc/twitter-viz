@@ -19,7 +19,7 @@
                 break
             }
         }
-        console.log(lastMessages);
+        // console.log(lastMessages);
         mapWordData(lastMessages);
     }
 
