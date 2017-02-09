@@ -1,6 +1,5 @@
 (function() {
     // every 1000 milliseconds (second parameter), startChatGrabLoop returns array of messages sent in past 5000 milliseconds (first parameter)
-    let wordFreq = {};
     startChatGrabLoop(5000, 1000);
 
     function chatGrabber(timeRange) {
@@ -20,7 +19,7 @@
                 break
             }
         }
-        // console.log(lastMessages);
+        console.log(lastMessages);
         mapWordData(lastMessages);
     }
 
@@ -32,6 +31,7 @@
     }
 
     function mapWordData(messages) {
+        let wordFreq = {}
         // refactor this ugly shit please
         const stopWords = [
                 'about', 'after', 'all', 'also', 'am', 'an', 'and', 'another', 'any', 'are', 'as', 'at', 'be',
@@ -58,7 +58,7 @@
                 }
             }
         }
-
+        // graphWordFreq(wordFreq)
         console.log(wordFreq);
     }
 
