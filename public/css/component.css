@@ -74,10 +74,32 @@ body {
 }
 
 .flexme {
-    left: auto;
+    left: -4%;
+    top: -12.7%;
+
+}
+.chat {
+  left: -8%;
+  top: -12.7%;
 }
 
+.d3 {
+  left: -3.3%;
+  top: -24%;
+}
 
+.d32 {
+ left: 30%;
+ top: -24%;
+}
+.td3 {
+left: -10%;
+top: -2%
+}
+.td32 {
+left: 40%;
+top: 100%;
+}
 /* Intro content, profile image and name, back button */
 
 .intro-content {
@@ -112,7 +134,7 @@ body {
 }
 
 .intro-content h1>span {
-    display: inline-block;
+    display: block;
     white-space: nowrap;
     position: relative;
 }
@@ -120,7 +142,7 @@ body {
 .intro-content h1>span:first-child {
     font-weight: 300;
     font-size: 2em;
-    position: reset-layout;
+    position: relative;
     top: -75%;
 }
 
@@ -236,6 +258,8 @@ body {
 
 .splitlayout.open-left {
     background: #34495e;
+    margin-left: -2.9%;
+    margin-top: -2.9%;
 }
 
 
@@ -243,14 +267,16 @@ body {
 
 .page-inner {
     padding: 2em;
+
+
 }
 
 .page-inner section {
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
 
 .page-inner h2 {
-    margin: 0 0 1em 0;
+    margin: 0 0 0em 0;
     font-weight: 300;
     font-size: 2.4em;
 }
@@ -312,8 +338,8 @@ body {
 /* Right side open */
 
 .open-right .side-left {
-    -webkit-transform: translateX(-60%);
-    transform: translateX(-60%);
+    -webkit-transform: translateX(-70%);
+    transform: translateX(-70%);
 }
 
 .open-right .side-right {
@@ -332,22 +358,22 @@ body {
 }
 
 .open-right .page-right {
-    -webkit-transform: translateX(20%);
-    transform: translateX(20%);
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
 }
 
 
 /* Left side open */
 
 .open-left .side-right {
-    -webkit-transform: translateX(60%);
-    transform: translateX(60%);
+    -webkit-transform: translateX(70%);
+    transform: translateX(70%);
 }
 
 .open-left .side-left {
     z-index: 200;
-    -webkit-transform: translateX(160%);
-    transform: translateX(160%);
+    -webkit-transform: translateX(170%);
+    transform: translateX(170%);
 }
 
 .close-left .side-left {
@@ -355,20 +381,20 @@ body {
 }
 
 .open-left .side-left .intro-content {
-    -webkit-transform: translateY(-50%) translateX(-110%) scale(0.4);
-    transform: translateY(-50%) translateX(-110%) scale(0.4);
+    -webkit-transform: translateY(-50%) translateX(-120%) scale(0.4);
+    transform: translateY(-50%) translateX(-120%) scale(0.4);
 }
 
 .open-left .codropsheader {
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.3s, visibility 0.1s 0.3s;
-    transition: opacity 0.3s, visibility 0.1s 0.3s;
+    -webkit-transition: opacity 0s, visibility 0.1s 0.1s;
+    transition: opacity 0s, visibility 0.1s 0.1s;
 }
 
 .open-left .page-left {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+    -webkit-transform: translateX(1%);
+    transform: translateX(1%);
 }
 
 
@@ -525,6 +551,7 @@ span.tw-inner {
     position: relative;
     overflow: hidden;
     border-radius: 6px;
+
 }
 
 .social-share:first-of-type {
@@ -534,12 +561,20 @@ span.tw-inner {
 .social-share.twtch {
     background: -webkit-gradient(radial, 37 56, 25, 36 190, 144, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, -10 72, 10, 310 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, 72 72, 20, -275 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))) rgba(100, 65, 164, 0.99) !important;
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') 0 -47px;
+		position: absolute;
+		top: -3.3%;
+		left: 59.7%;
 }
 
 .social-share.tw {
     background: -webkit-gradient(radial, 37 56, 25, 36 1, 144, from(rgba(56, 168, 186, 0.99)), to(rgba(56, 168, 186, 0.99))), -webkit-gradient(radial, -10 72, 10, 310 -72, 72, from(rgba(58, 175, 194, 0.99)), to(rgba(58, 175, 194, 0.99))), -webkit-gradient(radial, 72 72, 20, -275 -72, 72, from(rgba(58, 175, 194, 0.99)), to(rgba(58, 175, 194, 0.99))) rgba(76, 184, 201, 0.99) !important;
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') -73px -47px;
+    position: absolute;
+    left: 60.7%;
+    bottom: 84.7%;
+
 }
+
 
 .social-share:hover>span {
     top: -29px;
@@ -596,3 +631,11 @@ span.tw-inner {
 
 
 /*END FANCY BUTTON*/
+
+.form {
+position: absolute;
+align-items: center;
+top: -3%;
+left: -3.5%;
+
+}

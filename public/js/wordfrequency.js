@@ -1,28 +1,19 @@
 const fs = require('fs');
 const sw = require('stopword');
+const d3 = require('d3');
 
-let wordFreq = {};
-// read text data file (will be sessionStorage IRL)
-// so will be reading it in differently... and it might be in a
-// different form...
-fs.readFile('./unicorns2.txt', 'utf8', function (err, data) {
-   if (err) {
-      return console.error(err);
-   }
+function wordfrequency(obj) {
+  console.log(obj);
+  let wordFreq = {};
+  let sortable = [];
 
   //convert data to string
-  let str = data.toString();
+  let str = obj.toString();
   //strip punctuation
   let newStr = str.replace(/[&\/\\,+\(\)$~%\.!^'"\;:*?\[\]<>{}-]/g, '');
   //remove stopwords
   const arr = sw.removeStopwords(newStr.split(' '));
-  var wstream = fs.createWriteStream('data2.csv');
 
-  // for (var i = 0; i < arr.length; i++) {
-  //   wstream.write(arr[i]);
-  //   wstream.write(',\n');
-  // }
-  // wstream.end();
   //get word frequencies
   for (var i = 0; i < arr.length; i++) {
 
@@ -37,23 +28,19 @@ fs.readFile('./unicorns2.txt', 'utf8', function (err, data) {
   }
 
   // sort word frequencies highest to lowest
-  var sortable = [];
   for (var word in wordFreq) {
     sortable.push([word, wordFreq[word]])
   }
   sortable.sort(function(a, b) {
-    return a[1] - b[1]
+    return b[1] - a[1]
   });
   // log the sorted list, reversed
   // will be the input for the d3 graphs
-  console.log(sortable.reverse());
+  //console.log(sortable);
 
-  for (var i = 0; i < sortable.length; i++) {
-    wstream.write(sortable[i]);
-    wstream.write('\t');
-  }
-  wstream.end();
+  return sortable;
+};
 
-
-
-});
+module.exports = {
+  wordfrequency: wordfrequency
+};
