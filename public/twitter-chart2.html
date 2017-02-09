@@ -21,10 +21,12 @@
         url: `./getTweets/sunshine`,
       }).done(function(results) {
         for (let i = 0; i < 10; i++) {
-          words.push(results[i][0]);
-          freq.push(results[i][1]);
+          words.push(results.text[i][0]);
+          freq.push(results.text[i][1]);
         }
-        console.log();
+        for (let i = 0; i < results.images.length; i++) {
+          $('body').append(`<div style="width:300px; height: 300px; clip:rect(0px,300px,300px,0px)"><img src="${results.images[i]}"></div>`)
+        }
 
       var ctx = document.getElementById("myChart");
       // let words = ["alternate", "unicorns", "flying", "pink", "trump", "full", "house", "glittery"];

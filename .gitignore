@@ -3,3 +3,4 @@ hidden
 .env
 .DS_Store
 npm-debug.log
+.ds_store
