@@ -34,14 +34,20 @@ function generateChart(words, freq, label) {
       }]
     },
     options: {
+        animation: {
+            animateRotate: false,
+        },
       scales: {
         yAxes: [{
           ticks: {
-            beginAtZero: true
+            beginAtZero: true,
           }
         }]
       }
     }
   });
+  // myChart.options.animation.duration = 0;
+  // myChart.options.animation.animateRotate = false;
+
   return myChart;
 }

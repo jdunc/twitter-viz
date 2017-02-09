@@ -26,6 +26,9 @@
         // call function to embed featured stream in front end
         chatSkimmer(values[0].name, topStream[0].stream.channel.name,
             token);
+
+        // TODO: add on new stream load
+        sessionStorage.setItem('streamName', topStream[0].stream.channel.name);
     })
 
     function chatSkimmer(username, channel, token) {
