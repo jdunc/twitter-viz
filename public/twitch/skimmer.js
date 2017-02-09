@@ -18,11 +18,9 @@
         })
     ]).then((values) => {
         let topStream = values[1].featured;
-        console.log(topStream);
         topStream.sort((a, b) =>{
           return b.stream.viewers - a.stream.viewers
         })
-        console.log(topStream);
         loadFeaturedStream(topStream);
 
         // call function to embed featured stream in front end
