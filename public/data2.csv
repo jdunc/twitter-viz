@@ -1,10 +1,12 @@
 word, frequency
-'alternate', 6671
-'unicorns', 5824
-'flying', 3645
-'pink', 3389
-'trump', 3372
-'full', 3359
-'house', 3356
-'glittery', 3355
-'white', 3353
+{ label: 'Abulia', count: 10 },
+
+{ label:'alternate',  count:6671},
+{ label:'unicorns',  count:5824},
+{ label:'flying',  count:3645},
+{ label:'pink',  count:3389},
+{ label:'trump',  count:3372},
+{ label:'full',  count:3359},
+{ label:'house',  count:3356},
+{ label:'glittery',  count:3355},
+{ label:'white',  count:3353}
