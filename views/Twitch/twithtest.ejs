@@ -25,7 +25,6 @@
       <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
       <script src="/twitch/twitch.js" charset="utf-8"></script>
       <script src="/twitch/skimmer.js" charset="utf-8"></script>
-      <script src="/twitch/chat.js" charset="utf-8"></script>
 
 
 
@@ -142,9 +141,9 @@
                       <div class="row">
                         <div class="col-sm-4 d3">
                           <p>Visual 1</p>
-                          <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
-                              </iframe>
-
+                          <!-- <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                              </iframe> -->
+                            <canvas id="myChart" width="400" height="400"></canvas>
                           </div>
                           <div class="col-sm-4 d32"> <p>Visual 2</p> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
                           </iframe>
@@ -169,6 +168,10 @@
     <!-- /container -->
     <script src="/js/classie.js"></script>
     <script src="/js/cbpSplitLayout.js"></script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <script src="/twitch/chartGenerate.js" charset="utf-8"></script>
+    <script src="/twitch/chat.js" charset="utf-8"></script>
+    
 
 
 

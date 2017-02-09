@@ -19,7 +19,7 @@
                 break
             }
         }
-        console.log(lastMessages);
+        // console.log(lastMessages);
         mapWordData(lastMessages);
     }
 
@@ -31,7 +31,7 @@
     }
 
     function mapWordData(messages) {
-        let wordFreq = {}
+        let wordFreq = [];
         // refactor this ugly shit please
         const stopWords = [
                 'about', 'after', 'all', 'also', 'am', 'an', 'and', 'another', 'any', 'are', 'as', 'at', 'be',
@@ -58,8 +58,24 @@
                 }
             }
         }
-        // graphWordFreq(wordFreq)
-        console.log(wordFreq);
+        let topWords = [];
+        for (var key in wordFreq) {
+            topWords.push({'word': key, 'value': wordFreq[key]});
+        };
+        topWords.sort((a,b) => {
+            return b.value - a.value
+        });
+        let streamName = sessionStorage.getItem('streamName');
+        topWords = topWords.slice(0, 9);
+        let words = topWords.map(e => e.word);
+        let values = topWords.map(e => e.value);
+        if (typeof chart !== 'undefined') {
+            chart.update();
+        } else {
+            const chart = generateChart(words, values, streamName);
+        }
+
+        console.log(wordFreq, topWords);
     }
 
 }())
