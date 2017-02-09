@@ -28,20 +28,11 @@
     <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
     <script src="/js/modernizr.custom.js"></script>
 
-    <!-- Twitch scripts  -->
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="/twitch/cookies.js"></script>
-    <!--[IF IE]><!-->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <!--<![endif]-->
-    <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
-    <script src="/twitch/twitch.js" charset="utf-8"></script>
-    <script src="/twitch/skimmer.js" charset="utf-8"></script>
-    <script src="/twitch/chat.js" charset="utf-8"></script>
 
 
 
-    </script>
+
+
 
     <!-- Twitter scripts -->
 
@@ -49,20 +40,12 @@
 
   <body>
 
-
-
-
-
-
-
-
-
   <!-- /container -->
     <div class="container">
         <div id="splitlayout" class="splitlayout open-left">
             <div class="intro">
                 <div class="side side-left">
-                    <header class="codropsheader clearfix">
+                    <header class="codropsheader clearfix" style="position:relative">
 
                         <h1>GREATNESS</h1>
 
@@ -104,7 +87,7 @@
                         </div>
                         </input>
                     </section>
-                    <twitter></twitter>
+
 
                 </div>
                 <!-- /page-inner -->
@@ -146,11 +129,11 @@
 
                       <div class="row">
                         <div class="col-md-8 flexme">
-                              <iframe id="stream" src="" height="450" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
+                              <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
                                   </iframe>
 
                           </div>
-                          <div class="col-md-4 chat"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="450" width="310" frameborder="3" style="position:absolute;">
+                          <div class="col-md-4 chat"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
                               </iframe>
                               </div>
                         </div>
@@ -162,11 +145,12 @@
 
                       <div class="row">
                         <div class="col-sm-4 d3">
-                          <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="450" width="450" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                          <p>Visual 1</p>
+                          <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
                               </iframe>
 
                           </div>
-                          <div class="col-sm-4 d32"> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="450" width="450" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                          <div class="col-sm-4 d32"> <p>Visual 2</p> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
                           </iframe>
                               </div>
                         </div>
@@ -181,14 +165,27 @@
 
 
             <!-- /page-left -->
-            <a href="#" class="back back-right" title="back to intro">&rarr;</a>
-            <a href="#" class="back back-left" title="back to intro">&larr;</a>
+            <a href="/views/landing.ejs" class="back back-right" title="back to intro">&rarr;</a>
+            <a href="/views/landing.ejs" class="back back-left" title="back to intro">&larr;</a>
         </div>
         <!-- /splitlayout -->
     </div>
     <!-- /container -->
     <script src="/js/classie.js"></script>
     <script src="/js/cbpSplitLayout.js"></script>
+
+    <!-- Twitch scripts  -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/twitch/cookies.js"></script>
+    <!--[IF IE]><!-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <!--<![endif]-->
+    <script src="/cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+    <script src="/twitch/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/skimmer.js" charset="utf-8"></script>
+    <script src="/twitch/chat.js" charset="utf-8"></script>
+
+
 
 
 
@@ -198,3 +195,4 @@
 
 
   </body>
+</html>
