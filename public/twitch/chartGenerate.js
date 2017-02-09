@@ -37,7 +37,7 @@ function generateChart(words, freq, label) {
     },
     options: {
         animation: {
-            duration = 0,
+            duration: 0,
             animateRotate: false,
         },
       scales: {
