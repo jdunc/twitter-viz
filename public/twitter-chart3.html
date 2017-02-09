@@ -11,12 +11,16 @@
   </head>
   <body>
     <div id="wholePage" style="position: absolute">
-    <div style="width:400px; height:400px; position: absolute; background-color: white;">
+    <div style="width:400px; height:400px; position: absolute; background-color: white; top:0px;">
       <canvas id="myChart" width="400" height="400"></canvas>
     </div>
   </div>
     <script>
     $(document).ready(function(){
+      $('body').click(
+        function(){
+          console.log('clicked!');
+        });
       let words = [];
       let freq = [];
       $.ajax({
@@ -71,8 +75,12 @@
               }]
           }
       }
-  });
+  }); //chart created
+    $('#wholePage').animate({
+      top: -$('#wholePage').height()
+    }, 7000, function(){console.log('animated!');});
         });
+
     })
 
 </script>
