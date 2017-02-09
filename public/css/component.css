@@ -74,9 +74,24 @@ body {
 }
 
 .flexme {
-    left: auto;
+    left: -4%;
+    top: -12.7%;
+
+}
+.chat {
+  left: -8%;
+  top: -12.7%;
 }
 
+.d3 {
+  left: -3.3%;
+  top: -25%;
+}
+
+.d32 {
+ left: 20%;
+ top: -25%;
+}
 
 /* Intro content, profile image and name, back button */
 
@@ -112,7 +127,7 @@ body {
 }
 
 .intro-content h1>span {
-    display: inline-block;
+    display: block;
     white-space: nowrap;
     position: relative;
 }
@@ -120,7 +135,7 @@ body {
 .intro-content h1>span:first-child {
     font-weight: 300;
     font-size: 2em;
-    position: reset-layout;
+    position: relative;
     top: -75%;
 }
 
@@ -243,14 +258,16 @@ body {
 
 .page-inner {
     padding: 2em;
+
+
 }
 
 .page-inner section {
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
 
 .page-inner h2 {
-    margin: 0 0 1em 0;
+    margin: 0 0 0em 0;
     font-weight: 300;
     font-size: 2.4em;
 }
@@ -340,14 +357,14 @@ body {
 /* Left side open */
 
 .open-left .side-right {
-    -webkit-transform: translateX(60%);
-    transform: translateX(60%);
+    -webkit-transform: translateX(70%);
+    transform: translateX(70%);
 }
 
 .open-left .side-left {
     z-index: 200;
-    -webkit-transform: translateX(160%);
-    transform: translateX(160%);
+    -webkit-transform: translateX(170%);
+    transform: translateX(170%);
 }
 
 .close-left .side-left {
@@ -355,8 +372,8 @@ body {
 }
 
 .open-left .side-left .intro-content {
-    -webkit-transform: translateY(-50%) translateX(-110%) scale(0.4);
-    transform: translateY(-50%) translateX(-110%) scale(0.4);
+    -webkit-transform: translateY(-50%) translateX(-120%) scale(0.4);
+    transform: translateY(-50%) translateX(-120%) scale(0.4);
 }
 
 .open-left .codropsheader {
@@ -536,8 +553,8 @@ span.tw-inner {
     background: -webkit-gradient(radial, 37 56, 25, 36 190, 144, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, -10 72, 10, 310 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, 72 72, 20, -275 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))) rgba(100, 65, 164, 0.99) !important;
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') 0 -47px;
 		position: absolute;
-		top: -3%;
-		left: 60.9%;
+		top: -3.3%;
+		left: 59.7%;
 }
 
 .social-share.tw {
@@ -605,5 +622,6 @@ span.tw-inner {
 position: absolute;
 align-items: center;
 top: -3%;
+left: -3.5%;
 
 }
