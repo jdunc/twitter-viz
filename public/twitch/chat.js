@@ -1,6 +1,6 @@
 (function() {
     // every 1000 milliseconds (second parameter), startChatGrabLoop returns array of messages sent in past 5000 milliseconds (first parameter)
-    startChatGrabLoop(5000, 1000);
+    startChatGrabLoop(30000, 5000);
 
     function chatGrabber(timeRange) {
         // when called, chatGrabber should return an array filled with messages that match the timeRange parameter (in milliseconds)
