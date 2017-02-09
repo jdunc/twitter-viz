@@ -10,9 +10,11 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
-    <div style="width:400px; height:400px">
+    <div id="wholePage" style="float:left; position: absolute">
+    <div style="width:400px; height:400px; position: absolute">
       <canvas id="myChart" width="400" height="400"></canvas>
     </div>
+  </div>
     <script>
     $(document).ready(function(){
       let words = [];
@@ -25,7 +27,7 @@
           freq.push(results.text[i][1]);
         }
         for (let i = 0; i < results.images.length; i++) {
-          $('body').append(`<div style="width:300px; height: 300px; clip:rect(0px,300px,300px,0px)"><img src="${results.images[i]}"></div>`)
+          $('#wholePage').append(`<div style="width:300px; height: 300px; overflow:hidden"><img src="${results.images[i]}" style="height:300px; width:auto"></div>`)
         }
 
       var ctx = document.getElementById("myChart");
