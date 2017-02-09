@@ -21,7 +21,7 @@ router.get('/response', (req, res, next) => {
         res.cookie('token', {
             'access_token': JSON.parse(body).access_token
         });
-        res.render('Twitch/twitchauthorized');
+        res.render('Twitch/twithtest');
     });
 })
 

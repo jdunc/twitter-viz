@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Q3 project" />
+    <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
+    <meta name="author" content="Codrops" />
+    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+
+    <title>Q3 Test Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
+    <script src="/js/modernizr.custom.js"></script>
+
+
+
+
+
+
+
+    <!-- Twitter scripts -->
+
+  </head>
+
+  <body>
+
+  <!-- /container -->
+    <div class="container">
+        <div id="splitlayout" class="splitlayout open-left">
+            <div class="intro">
+                <div class="side side-left">
+                    <header class="codropsheader clearfix" style="position:relative">
+
+                        <h1>GREATNESS</h1>
+
+                      </header>
+
+
+                      <div class="intro-content">
+                          <div class="profile1">
+                            <a class="twitch-connect" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="/img/twitch.png" alt="profile1"></div>
+                          <h1><span></span>
+                              <span>Chat Visualization</span></h1>
+                              </a>
+
+
+
+                      </div>
+                        <div class="overlay"></div>
+                </div>
+                <div class="side side-right">
+                    <div class="intro-content">
+                        <div class="profile2"><img src="/img/twitb.png" alt="profile2"></div>
+                        <h1><span></span>
+                          <span>Tweet Visualization</span></h1>
+
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <!-- /intro -->
+            <div class="page page-right">
+                <div class="page-inner">
+                    <section>
+                        <h2>Twitter Tweet Visualization</h2>
+                        <input type="text" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
+                        <%# <input type="submit" style="width: 5vw; height:100px;">%>
+                        <div class="social-share tw">
+                          <span class="tw-inner"></span>
+                            <a class="cta tw" href="#">Search</a>
+                        </div>
+                        </input>
+                    </section>
+
+
+                </div>
+                <!-- /page-inner -->
+            </div>
+
+            <!-- /page-right -->
+
+            <div class="page page-left">
+                <div class="page-inner">
+
+                  <div class="container">
+
+                <div class="row">
+                  <div class="col-">
+
+                      <div class="form">
+                      <input type="text" placeholder="Enter channel name here" frameborder="10" style="width: 40vw; height:50px; position:absolute" class="formInfo"></input>
+                    </div>
+                  </div>
+
+                <div class="row">
+                              <div class="col-">
+
+                                <div class="social-share twtch">
+                                  <span class="twtch-inner">
+                                    <img class="sizing" src="/img/Small.png"></span>
+                                  <a class="cta twtch" href="#">Submit</a>
+                                </div>
+                              </div>
+
+
+
+                  </div>
+                </div>
+
+
+                    <div class="row">
+
+
+                      <div class="row">
+                        <div class="col-md-8 flexme">
+                              <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
+                                  </iframe>
+
+                          </div>
+                          <div class="col-md-4 chat"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
+                              </iframe>
+                              </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+
+                      <div class="row">
+                        <div class="col-sm-4 d3">
+                          <p>Visual 1</p>
+                          <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                              </iframe>
+
+                          </div>
+                          <div class="col-sm-4 d32"> <p>Visual 2</p> <iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                          </iframe>
+                              </div>
+                        </div>
+
+                    </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+            <!-- /page-left -->
+            <a href="/views/landing.ejs" class="back back-right" title="back to intro">&rarr;</a>
+            <a href="/views/landing.ejs" class="back back-left" title="back to intro">&larr;</a>
+        </div>
+        <!-- /splitlayout -->
+    </div>
+    <!-- /container -->
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpSplitLayout.js"></script>
+
+    <!-- Twitch scripts  -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="/twitch/cookies.js"></script>
+    <!--[IF IE]><!-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <!--<![endif]-->
+    <script src="/cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+    <script src="/twitch/twitch.js" charset="utf-8"></script>
+    <script src="/twitch/skimmer.js" charset="utf-8"></script>
+    <script src="/twitch/chat.js" charset="utf-8"></script>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+  </body>
+</html>
