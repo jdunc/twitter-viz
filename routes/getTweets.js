@@ -53,16 +53,25 @@ app.get('/getTweets/:search', function(req, res) {
                 obj[responseName] = response;
                 if (count === maxCount) {
                     // console.log('max', count, obj.tweets.statuses.length);
+                    let tweetsImagesArray = [];
                     let tweetsArray = [];
+                    //add text of tweet to array and add image url if it exists
                     obj.tweets.statuses.forEach(function(item, index) {
                         tweetsArray.push(item.text);
+                        if (item.entities.media !== undefined && (item.entities.media[0].type === "photo" || item.entities.media[0].type === "animated_gif")) {
+                            tweetsImagesArray.push(item.entities.media[0].media_url);
+                        }
                     });
                     //combine and clean the text of the tweets
                     let allTweetsText = tweetsArray.join(' ');
                     let allTweetsParsed = allTweetsText.replace(/\b\S*?http\S*\b/g, " ").replace(/@\w*:*?/g, "").replace(/ RT /g, " ");
                     obj.text = allTweetsParsed;
                     let wordFrequencyObject = wordfrequency(obj.text);
-                    res.send(wordFrequencyObject);
+                    let sendResults = {
+                        text: wordFrequencyObject,
+                        images: tweetsImagesArray
+                    }
+                    res.send(sendResults);
                 } else {
                     count++;
                     getTweets(path, params, count, obj);
