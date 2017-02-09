@@ -525,6 +525,7 @@ span.tw-inner {
     position: relative;
     overflow: hidden;
     border-radius: 6px;
+
 }
 
 .social-share:first-of-type {
@@ -534,6 +535,9 @@ span.tw-inner {
 .social-share.twtch {
     background: -webkit-gradient(radial, 37 56, 25, 36 190, 144, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, -10 72, 10, 310 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, 72 72, 20, -275 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))) rgba(100, 65, 164, 0.99) !important;
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') 0 -47px;
+		position: absolute;
+		top: 1.8888%;
+		left: 42%;
 }
 
 .social-share.tw {
@@ -596,3 +600,8 @@ span.tw-inner {
 
 
 /*END FANCY BUTTON*/
+
+.form {
+position: absolute;
+align-items: center;
+}
