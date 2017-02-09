@@ -19,10 +19,12 @@
   "homepage": "https://github.com/jdunc/twitter-viz#readme",
   "dependencies": {
     "chart.js": "^2.5.0",
+    "d3": "^4.5.0",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "irc": "^0.5.2",
+    "stopword": "^0.1.1",
     "twitter": "^1.7.0"
   },
   "devDependencies": {
