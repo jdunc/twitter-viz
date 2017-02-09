@@ -1,5 +1,6 @@
 const fs = require('fs');
 const sw = require('stopword');
+const d3 = require('d3');
 
 let wordFreq = {};
 // read text data file (will be sessionStorage IRL)
@@ -16,6 +17,24 @@ fs.readFile('./unicorns2.txt', 'utf8', function (err, data) {
   let newStr = str.replace(/[&\/\\,+\(\)$~%\.!^'"\;:*?\[\]<>{}-]/g, '');
   //remove stopwords
   const arr = sw.removeStopwords(newStr.split(' '));
+
+  //data is in an arr, so...
+  //but wtf to do with this?
+  ///////////////////////////////////////////
+  var wordCount = d3.nest()
+    .key(function(d) { return d.description; })
+    .rollup(function(v) { return v.length; })
+    .entries(descObjects);
+
+  wordCount.sort(function(a,b) {
+    return b.values - a.values;
+  });
+  var tags = [];
+  wordCount.forEach(function(d) {
+    tags.push([d.key,parseInt(d.values)]);
+  });
+  tags = tags.slice(0,250);
+  //////////////////////////////////////////
   var wstream = fs.createWriteStream('data2.csv');
 
   // for (var i = 0; i < arr.length; i++) {
