@@ -3,13 +3,17 @@
  * <canvas id="myChart" width="400" height="400"></canvas>
  * PUT THIS HTML INTO WHERE WE WANT THE CHART TO BE
  */
-function generateChart(words, freq, label) {
+function generateChart(words, freq, label)
+{
   const ctx = $("#myChart");
-  const myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
+  const myChart = new Chart(ctx,
+  {
+    type: 'doughnut',
+    data:
+    {
       labels: words,
-      datasets: [{
+      datasets: [
+      {
         label: label,
         data: freq,
         backgroundColor: [
@@ -22,7 +26,7 @@ function generateChart(words, freq, label) {
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(40, 155, 76, 1)',
-          'rgba(40, 23, 76, 1)'
+          'rgba(40, 23, 76, 1)',
         ],
         borderColor: [
           'rgba(255,99,132,1)',
@@ -35,18 +39,24 @@ function generateChart(words, freq, label) {
         borderWidth: 1
       }]
     },
-    options: {
-        animation: {
-            duration: 0,
-            animateRotate: false,
-        },
-      scales: {
-        yAxes: [{
-          ticks: {
+    options:
+    {
+      animation:
+      {
+        duration: 0,
+        animateRotate: false,
+      },
+      scales:
+      {
+        yAxes: [
+        {
+          ticks:
+          {
             beginAtZero: true,
-          }
+          },
         }]
-      }
+      },
+      events: ["click"],
     }
   });
 
