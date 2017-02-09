@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express.Router();
 const Twitter = require('twitter');
+const wordfrequency = require('../public/js/wordfrequency').wordfrequency;
 //store all the verifications in a .env file, receive keys and secrets by creating an app at https://apps.twitter.com/
 const client = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -22,7 +23,6 @@ app.get('/getTweets/:search', function(req, res) {
     }
     let count = 1;
     let obj = {};
-    getTweets(path, params, count, obj);
 
     function getTweets(path, params, count, obj, tweetStatuses) {
         //this is the twitter module's method of hitting the endpoint and returning the results
@@ -67,6 +67,7 @@ app.get('/getTweets/:search', function(req, res) {
                     getTweets(path, params, count, obj);
                 }
             }
+
         }); //end of client.get
     }
     //stream is an alternate method to receive tweets by updating periodically when new tweets are released, very slow for development, don't understand it's usefulness for us
