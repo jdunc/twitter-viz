@@ -16,7 +16,7 @@ $(document).ready(function() {
             console.log("these are the words", words, freq);
         });
 
-        var ctx = document.getElementById("twitterChart").update();
+        var ctx = document.getElementById("twitterChart");
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
