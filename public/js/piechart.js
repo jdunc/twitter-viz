@@ -1,21 +1,27 @@
-
 $(document).ready(function(){
-  let words = [];
-  let freq = [];
+  console.log('READY!');
   $("#twit-search-btn").on('click', (e) => {
     e.preventDefault();
+    // can we clear the chart?
+    let words = [];
+    let freq = [];
+    let searchterm = $("#twit-search-term").val();
+    console.log(searchterm);
     console.log("you clicked! yaaaaaaaay");
     $.ajax({        //TO DO: connect to search button
-      url: `./getTweets/puppy`,  //connect to search term $("#twit-search-btn")
+      url: '/getTweets/' + searchterm,
     }).done(function(results) {
       for (let i = 0; i < 10; i++) {
         words.push(results.text[i][0]);
         freq.push(results.text[i][1]);
       }
+      console.log("these are the words", words, freq);
   });
+
   var ctx = document.getElementById("myChart");
   // let words = ["alternate", "unicorns", "flying", "pink", "trump", "full", "house", "glittery"];
   // let freq = [6671, 5824, 3645, 3389, 3372, 3359, 3356, 3355];
+
   var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -46,6 +52,7 @@ $(document).ready(function(){
           }]
       }
   }
-});
+}); // end new chart
+
     });
 })

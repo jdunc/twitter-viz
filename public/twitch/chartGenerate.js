@@ -6,7 +6,7 @@
 function generateChart(words, freq, label)
 {
   const ctx = $("#myChart");
-  const myChart = new Chart(ctx,
+  const twitchChart = new Chart(ctx,
   {
     type: 'doughnut',
     data:
@@ -23,18 +23,22 @@ function generateChart(words, freq, label)
           'rgba(75, 192, 192, 0.5)',
           'rgba(153, 102, 255, 0.5)',
           'rgba(255, 159, 64, 0.5)',
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(40, 155, 76, 1)',
-          'rgba(40, 23, 76, 1)',
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(40, 155, 76, 0.5)',
+          'rgba(40, 23, 76, 0.5)',
         ],
         borderColor: [
-          'rgba(255,99,132,1)',
+          'rgba(255,99,132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)',
           'rgba(75, 192, 192, 1)',
           'rgba(153, 102, 255, 1)',
           'rgba(255, 159, 64, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(40, 155, 76, 1)',
+          'rgba(40, 23, 76, 1)',
         ],
         borderWidth: 1
       }]
@@ -60,5 +64,5 @@ function generateChart(words, freq, label)
     }
   });
 
-  return myChart;
+  return twitchChart;
 }

@@ -33,10 +33,8 @@ function wordfrequency(obj) {
     sortable.sort(function(a, b) {
         return b[1] - a[1]
     });
-    // log the sorted list, reversed
-    // will be the input for the d3 graphs
-    //console.log(sortable);
-
+    // remove search term
+    sortable.splice(0, 1);
     return sortable;
 };
 
