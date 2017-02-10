@@ -28,6 +28,10 @@
 
 
     <!-- Twitter scripts -->
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.1.1.js"
+       integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+       crossorigin="anonymous"></script>
 
 
 </head>
@@ -40,7 +44,7 @@
                     <header class="codropsheader clearfix"
                       style="position:relative">
 
-                        <h1>GREATNESS</h1>
+                        <h1>Data Vix</h1>
 
                       </header>
 
@@ -70,28 +74,34 @@
 
 
                         <h2>Twitter Tweet Visualization</h2>
-                          <input type="text" placeholder="Enter #keyword or @username here" style="width: 40vw; height:55px;" class="formInfo"></input>
+                        <input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here" style="width: 40vw; height:55px;" class="formInfo"></input>
+<div class="social-share tw">
+   <span class="tw-inner"></span>
+   <button type="submit" id="twit-search-btn" class="cta tw">Search</button> <!-- button needs to make ajax call to piechart.js & send search term -->
+</div>
+                          <!-- <input type="text" placeholder="Enter #keyword or @username here" style="width: 40vw; height:55px;" class="formInfo"></input>
                         <div class="social-share tw">
                           <span class="tw-inner"></span>
                             <a class="cta tw" href="#">Search</a>
-                        </div>
+                        </div> -->
 
 
-                    <div class="row">
+                    <!-- <div class="row"> -->
 
                         <div class="row">
-                          <div class="col-sm-4 td3">
+                          <div class="col-sm-4">
 
-                            <iframe  src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
-                                </iframe>
+                            <div class="piechart" style="width=400px; height=400px">
+    <canvas id="myChart"></canvas>
+</div>
 
                             </div>
-                            <div class="col-sm-4 td32"><iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
+                            <!-- <div class="col-sm-4 td32"><iframe src="https://s-media-cache-ak0.pinimg.com/originals/d1/a0/b5/d1a0b54897eadb9a7c0eea0cde0e746b.png" height="390" width="420" frameborder="0" scrolling="no" allowfullscreen="true" style="position:relative;">
                             </iframe>
-                                </div>
+                                </div> -->
                           </div>
 
-                      </div>
+                      <!-- </div> -->
 
                     </div>
 
@@ -112,6 +122,8 @@
     <!-- /container -->
     <script src="/js/classie.js"></script>
     <script src="/js/cbpSplitLayout.js"></script>
+
+    <script src="/js/piechart.js"></script>
 
 
 </body>

@@ -73,17 +73,17 @@ body {
     /* avoid gap */
 }
 
-.flexme {
+/*.flexme {
     left: -4%;
     top: -12.7%;
 
-}
-.chat {
-  left: -15%;
-  top: -20%;
-}
+}*/
+/*.chats {
+  left: -50%;
+  top: 20%;
+}*/
 
-.d3 {
+/*.d3 {
   left: -3.3%;
   top: -24%;
 }
@@ -99,7 +99,7 @@ top: -2%
 .td32 {
 left: 40%;
 top: 100%;
-}
+}*/
 /* Intro content, profile image and name, back button */
 
 .intro-content {
@@ -492,7 +492,13 @@ top: 100%;
     }
 }
 
+.row {
+  margin-top: 1%;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
 
+}
 /*THIS IS FOR FANCY BUTTON*/
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
