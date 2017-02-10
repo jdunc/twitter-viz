@@ -18,3 +18,4 @@ app.use('/twitch', twitch);
 app.listen(port);
 
 console.log('server here on port ', port);
+module.exports = app;
