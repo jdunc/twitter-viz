@@ -8,68 +8,38 @@
       <meta name="description" content="Q3 project" />
       <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
       <meta name="author" content="Codrops" />
-
-      <!-- Bootstrap core CSS -->
       <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-
-      <!-- Custom styles for this template -->
       <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
-
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
       <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-
-      <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
       <link rel="stylesheet" type="text/css" href="/css/demo.css" />
       <link rel="stylesheet" type="text/css" href="/css/component.css" />
       <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
       <script src="/js/modernizr.custom.js"></script>
-
       <script src="https://code.jquery.com/jquery.min.js"></script>
-      <!-- Latest compiled and minified CSS -->
-
-      <!-- Twitch scripts  -->
-      <script src="/twitch/cookies.js"></script>
-      <!--[IF IE]><!-->
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-      <!--<![endif]-->
+      <script src="/twitch/cookies.js"></script>
       <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
       <script src="/twitch/twitch.js" charset="utf-8"></script>
       <script src="/twitch/skimmer.js" charset="utf-8"></script>
-
-
-
-      <!-- Twitter scripts -->
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.1.1.js"
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"
           integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
           crossorigin="anonymous"></script>
-
   </head>
-
   <body>
-
-
-  <!-- /container -->
     <div class="container">
         <div id="splitlayout" class="splitlayout">
             <div class="intro">
                 <div class="side side-left">
                     <header class="codropsheader clearfix" style="position:relative">
-
                         <h1>Data Vix</h1>
-
                       </header>
-
-
                       <div class="intro-content">
                           <div class="profile1">
                             <a class="" href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=ipr78n41sqd6fqbacj2gykwv5lxpnd&redirect_uri=http://localhost:8000/twitch/response&scope=chat_login"><img src="/img/twitch.png" alt="profile1"></div>
                           <h1><span></span>
                               <span>Chat Visualization</span></h1>
-                              </a>
-
-
-
+                            </a>
                       </div>
                         <div class="overlay"></div>
                 </div>
@@ -78,7 +48,6 @@
                         <div class="profile2"><img src="/img/twitb.png" alt="profile2"></div>
                         <a><h1><span></span>
                           <span>Tweet Visualization</span></h1></a>
-
                     </div>
                     <div class="overlay"></div>
                 </div>
@@ -101,16 +70,13 @@
                         </div>
                         </input> -->
                     </section>
-
                     <div class="piechart" style="width=400px; height=400px">
-    <canvas id="myChart"></canvas>
+    <canvas id="twitterChart"></canvas>
 </div>
                 </div>
                 <!-- /page-inner -->
             </div>
-
             <!-- /page-right -->
-
             <div class="page page-left">
                 <div class="page-inner">
                   <div class="container">
@@ -122,7 +88,6 @@
                   </div>
                 <div class="row">
                               <div class="col-sm-offset-2">
-
                                 <div class="social-share twtch">
                                   <span class="twtch-inner">
                                     <img class="sizing" src="/img/Small.png"></span>
@@ -162,21 +127,6 @@
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
     <script src="/twitch/chartGenerate.js" charset="utf-8"></script>
     <script src="/twitch/chat.js" charset="utf-8"></script>
-
     <script src="/js/piechart.js"></script>
-
-
-
-
-
-
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-
   </body>
 </html>
