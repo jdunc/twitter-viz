@@ -18,10 +18,7 @@ $(document).ready(function(){
       console.log("these are the words", words, freq);
   });
 
-  var ctx = document.getElementById("myChart");
-  // let words = ["alternate", "unicorns", "flying", "pink", "trump", "full", "house", "glittery"];
-  // let freq = [6671, 5824, 3645, 3389, 3372, 3359, 3356, 3355];
-
+  var ctx = document.getElementById("myChart").update();
   var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
