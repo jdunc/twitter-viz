@@ -1,191 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Q3 Data Visualization</title>
-      <meta name="description" content="Q3 project" />
-      <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
-      <meta name="author" content="Codrops" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q3 Data Visualization</title>
+  <meta name="description" content="Q3 project" />
+  <meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
+  <meta name="author" content="Codrops" />
 
-      <!-- Bootstrap core CSS -->
-      <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      <!-- Custom styles for this template -->
-      <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
 
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-      <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
-      <link rel="stylesheet" type="text/css" href="/css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="/css/component.css" />
-      <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
-      <script src="/js/modernizr.custom.js"></script>
+  <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
+  <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
+  <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
+  <script src="/js/modernizr.custom.js"></script>
 
-      <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-      crossorigin="anonymous"></script>      <!-- Latest compiled and minified CSS -->
-      <!-- Twitch scripts  -->
-      <script src="/twitch/cookies.js"></script>
-      <!--[IF IE]><!-->
-      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-      <!--<![endif]-->
-      <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
-      <script src="/twitch/twitch.js" charset="utf-8"></script>
-      <script src="/twitch/skimmer.js" charset="utf-8"></script>
-      <!-- Twitter scripts -->
+  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>      <!-- Latest compiled and minified CSS -->
+  <!-- Twitch scripts  -->
+  <script src="/twitch/cookies.js"></script>
+  <!--[IF IE]><!-->
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <!--<![endif]-->
+  <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+  <script src="/twitch/twitch.js" charset="utf-8"></script>
+  <script src="/twitch/skimmer.js" charset="utf-8"></script>
+  <!-- Twitter scripts -->
 
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
 
   <!-- /container -->
-    <div class="container">
-        <div id="splitlayout" class="splitlayout open-left">
-            <div class="intro">
-                <div class="side side-left">
-                    <header class="codropsheader clearfix" style="position:relative">
+  <div class="container">
+    <div id="splitlayout" class="splitlayout open-left">
+      <div class="intro">
+        <div class="side side-left">
+          <header class="codropsheader clearfix" style="position:relative">
 
-                        <!-- <h1>Data Vix</h1> -->
+            <!-- <h1>Data Vix</h1> -->
 
-                      </header>
-
-
-                      <div class="intro-content">
-                          <div class="profile1">
-                            <a><img src="/img/twitch.png" alt="profile1"></div>
-                          <!-- <h1>
-                            <span></span>
-                              <span>Chat Visualization</span></h1> -->
-                              </a>
+          </header>
 
 
+          <div class="intro-content">
+            <div class="profile1">
+              <a><img src="/img/twitch.png" alt="profile1"></div>
+                <!-- <h1>
+                <span></span>
+                <span>Chat Visualization</span></h1> -->
+              </a>
 
-                      </div>
-                        <div class="overlay"></div>
-                </div>
-                <div class="side side-right">
-                    <div class="intro-content">
-                        <div class="profile2"><a><img src="/img/twitb.png" alt="profile2"></div>
-                        <!-- <h1><span></span>
-                          <span>Tweet Visualization</span></h1> -->
-                        </a>
 
-                    </div>
-                    <div class="overlay"></div>
-                </div>
+
             </div>
-            <!-- /intro -->
-            <div class="page page-right">
-                <div class="page-inner">
-                    <section>
-                        <!-- <h2>Twitter Tweet Visualization</h2> -->
-                        <input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here to see tweet visualization" style="width: 40vw; height:55px;" class="formInfo"></input>
-                        <div class="social-share tw">
-                           <span class="tw-inner"></span>
-                           <button type="submit" id="twit-search-btn" class="cta tw">Search</button> <!-- button needs to make ajax call to piechart.js & send search term -->
-                        </div>
-                        <!-- <input type="text" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
-                        <%# <input type="submit" style="width: 5vw; height:100px;">%>
-                        <div class="social-share tw">
-                          <span class="tw-inner"></span>
-                            <a class="cta tw" href="#">Search</a>
-                        </div>
-                        </input> -->
-                    </section>
+            <div class="overlay"></div>
+          </div>
+          <div class="side side-right">
+            <div class="intro-content">
+              <div class="profile2"><a><img src="/img/twitb.png" alt="profile2"></div>
+                <!-- <h1><span></span>
+                <span>Tweet Visualization</span></h1> -->
+              </a>
 
-                    <div class="piechart col-md-7" style="width=400px; height=400px">
-                      <canvas id="twitterChart"></canvas>
-                    </div>
-
-
-
-
-
-                </div>
-                <!-- /page-inner -->
             </div>
-
-            <!-- /page-right -->
-
-            <div class="page page-left">
-                <div class="page-inner">
-
-                  <div class="container">
-
-                <div class="row">
-                  <div class="col-">
-
-                      <!-- <div class="form"> -->
-                      <input type="text" placeholder="Enter channel name here" frameborder="10" style="width: 40vw; height:50px; position:absolute" class="formInfo"></input>
-                    <!-- </div> -->
-                  </div>
-
-                <div class="row">
-                              <div class="col-sm-offset-2">
-
-                                <div class="social-share twtch">
-                                  <span class="twtch-inner">
-                                    <img class="sizing" src="/img/Small.png"></span>
-                                  <a class="cta twtch" href="#">Submit</a>
-                                </div>
-                              </div>
-
-
-
-                  </div>
-                </div>
-
-
-                    <div class="row">
-
-
-                      <div class="row">
-                        <div class="col-sm-offset-9">
-                              <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
-                                  </iframe>
-
-                          </div>
-                          <div class="col-sm-offset-3"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
-                              </iframe>
-                              </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                      <div class="col-sm-4">
-                          <canvas id="myChart" width="400px" height="400px"></canvas>
-                        </div>
-
-
-                    </div>
-
-
-
-                    </div>
-                  </div>
-                </div>
-
-
-            <!-- /page-left -->
-            <a href="#" class="back back-right" title="back to intro">&rarr;</a>
-            <a href="#" class="back back-left" title="back to intro">&larr;</a>
+            <div class="overlay"></div>
+          </div>
         </div>
-        <!-- /splitlayout -->
-    </div>
-    <!-- /container -->
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpSplitLayout.js"></script>
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
-    <script src="/twitch/chartGenerate.js" charset="utf-8"></script>
-    <script src="/twitch/chat.js" charset="utf-8"></script>
-    <script src="/js/piechart.js"></script>
+        <!-- /intro -->
+        <div class="page page-right">
+          <div class="page-inner">
+            <section>
+              <!-- <h2>Twitter Tweet Visualization</h2> -->
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-sm-7"><input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here to see tweet visualization" style="width: 48vw; height:55px;" class="formInfo"></input></div>
+                <div class="col-sm-3"><div class="social-share tw">
+                  <span class="tw-inner"></span>
+                  <button type="submit" id="twit-search-btn" class="cta tw">Search</button> <!-- button needs to make ajax call to piechart.js & send search term -->
+                </div></div>
+              </div>
+              <!-- <input type="text" placeholder="enter #keyword or @username here" style="width: 40vw; height:50px;" class="formInfo"></input>
+              <%# <input type="submit" style="width: 5vw; height:100px;">%>
+              <div class="social-share tw">
+              <span class="tw-inner"></span>
+              <a class="cta tw" href="#">Search</a>
+            </div>
+          </input> -->
+        </section>
+        <div class="row">
+        <div class="piechart col-md-12">
+          <canvas id="twitterChart"></canvas>
+        </div>
+        </div>
 
-  </body>
+
+
+
+
+      </div>
+      <!-- /page-inner -->
+    </div>
+
+    <!-- /page-right -->
+
+    <div class="page page-left">
+      <div class="page-inner">
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-">
+
+              <!-- <div class="form"> -->
+              <input type="text" placeholder="Enter channel name here" frameborder="10" style="width: 40vw; height:50px; position:absolute" class="formInfo"></input>
+              <!-- </div> -->
+            </div>
+
+            <div class="row">
+              <div class="col-sm-offset-2">
+
+                <div class="social-share twtch">
+                  <span class="twtch-inner">
+                    <img class="sizing" src="/img/Small.png"></span>
+                    <a class="cta twtch" href="#">Submit</a>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="row">
+                <div class="col-sm-offset-9">
+                  <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
+                  </iframe>
+
+                </div>
+                <div class="col-sm-offset-3"> <iframe id="chat" frameborder="10" scrolling="no" id="chat_embed" src="" height="400" width="310" frameborder="3" style="position:absolute;">
+                </iframe>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-4">
+              <canvas id="myChart" width="400px" height="400px"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page-left -->
+    <a href="#" class="back back-right" title="back to intro">&rarr;</a>
+    <a href="#" class="back back-left" title="back to intro">&larr;</a>
+  </div>
+  <!-- /splitlayout -->
+</div>
+<!-- /container -->
+<script src="/js/classie.js"></script>
+<script src="/js/cbpSplitLayout.js"></script>
+<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+<script src="/twitch/chartGenerate.js" charset="utf-8"></script>
+<script src="/twitch/chat.js" charset="utf-8"></script>
+<script src="/js/piechart.js"></script>
+
+</body>
 </html>
