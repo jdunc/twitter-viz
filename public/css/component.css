@@ -223,14 +223,14 @@ top: 100%;
     top: 0;
     overflow: auto;
     min-height: 100%;
-    width: 75%;
+    width: 80%;
     height: auto;
     font-size: 1.4em;
     -webkit-backface-visibility: hidden;
 }
 
 .page-right {
-    left: 10%;
+    left: 11%;
     outline: 5px solid #ecf0f1;
     /* avoid rounding gaps */
     background: #ecf0f1;

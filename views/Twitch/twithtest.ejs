@@ -80,14 +80,17 @@
           </div>
         </div>
         <!-- /intro -->
-        <div class="page page-right">
-          <div class="page-inner">
+        <div class="page page-right" style=" height:100vh; position:absolute">
+          <!-- these next two lines are where the images are added if you still want to include them -->
+          <div id="twitterImages" style="position: absolute; width:100%; height:100%; z-index:5"></div>
+          <div id="twitterImages2" style="position: absolute; width:100%; height:100%; z-index:4"></div>
+          <div class="page-inner" style="position:relative">
             <section>
               <!-- <h2>Twitter Tweet Visualization</h2> -->
-              <div class="row">
+              <div class="row" style="z-index: 50">
                 <div class="col-md-2"></div>
-                <div class="col-sm-7"><input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here to see tweet visualization" style="width: 48vw; height:55px;" class="formInfo"></input></div>
-                <div class="col-sm-3"><div class="social-share tw">
+                <div class="col-sm-7" style="z-index:100"><input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here to see tweet visualization" style="width: 48vw; height:55px;" class="formInfo"></input></div>
+                <div class="col-sm-3" style="z-index:100"><div class="social-share tw">
                   <span class="tw-inner"></span>
                   <button type="submit" id="twit-search-btn" class="cta tw">Search</button> <!-- button needs to make ajax call to piechart.js & send search term -->
                 </div></div>
@@ -100,8 +103,8 @@
             </div>
           </input> -->
         </section>
-        <div class="row">
-        <div class="piechart col-md-12">
+        <div class="row" style="z-index: 50">
+        <div class="piechart col-md-12" style="background-color:rgba(255,255,255,1); z-index:100">
           <canvas id="twitterChart"></canvas>
         </div>
         </div>
@@ -146,6 +149,8 @@
 
 
             <div class="row">
+
+
               <div class="row">
                 <div class="col-sm-offset-9">
                   <iframe id="stream" src="" height="400" width="650" frameborder="10" scrolling="no" allowfullscreen="true">
@@ -165,6 +170,8 @@
               <canvas id="myChart" width="400px" height="400px"></canvas>
             </div>
           </div>
+          <!-- /container -> page inner -> page -->
+
         </div>
       </div>
     </div>

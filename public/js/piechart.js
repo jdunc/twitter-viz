@@ -13,6 +13,13 @@ $(document).ready(function() {
                 words.push(results.text[i][0]);
                 freq.push(results.text[i][1]);
             }
+            //add images to page
+            //this loop and the animations after the graph are what add and animate the images
+            for (let i = 0; i < results.images.length; i++) {
+                $('#twitterImages').append(`<div style="width:300px; height: 300px; overflow:hidden; background-image: url(${results.images[i]}); background-size: cover; float:left"></div>`)
+                $('#twitterImages2').append(`<div style="width:300px; height: 300px; overflow:hidden; background-image: url(${results.images[i]}); background-size: cover; float:left"></div>`)
+                    // <img src="" style="height:300px; width:auto;">
+            }
             console.log("these are the words", words, freq);
             var ctx = document.getElementById("twitterChart");
             var myChart = new Chart(ctx, {
@@ -46,7 +53,49 @@ $(document).ready(function() {
                     }
                 }
             }); // end new chart
-        });
+            setTimeout(animateUp2, 9000);
+            $('#twitterImages').animate({
+                top: -$('#twitterImages').height()
+            }, 10000, 'linear', function() {
+                $("#twitterImages").css({
+                    top: '0px',
+                    "z-index": 3
+                });
+            }); //end of first animation
+            function animateUp2() {
+                setTimeout(animateUp, 9000);
+                $('#twitterImages2').animate({
+                    top: -$('#twitterImages2').height()
+                }, 10000, 'linear', function() {
+                    $("#twitterImages").css({
+                        top: '0px',
+                        "z-index": 4
+                    });
+                    $("#twitterImages2").css({
+                        top: '0px',
+                        "z-index": 3
+                    });
+
+                }); //end of animateUp2
+            }
+
+            function animateUp() {
+                setTimeout(animateUp2, 9000);
+                $('#twitterImages').animate({
+                    top: -$('#twitterImages').height()
+                }, 10000, 'linear', function() {
+                    $("#twitterImages").css({
+                        top: '0px',
+                        "z-index": 3
+                    });
+                    $("#twitterImages2").css({
+                        top: '0px',
+                        "z-index": 4
+                    });
+                }); //end of animateUp2
+            }
+
+        }); //end of .done
 
 
 
