@@ -15,16 +15,14 @@
       <link rel="stylesheet" type="text/css" href="/css/component.css" />
       <link rel="stylesheet" type="text/css" href="/css/twitch.css" />
       <script src="/js/modernizr.custom.js"></script>
-      <script src="https://code.jquery.com/jquery.min.js"></script>
-      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
       <script src="/twitch/cookies.js"></script>
       <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
       <script src="/twitch/twitch.js" charset="utf-8"></script>
       <script src="/twitch/skimmer.js" charset="utf-8"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.1.1.js"
-          integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-          crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -70,9 +68,9 @@
                         </div>
                         </input> -->
                     </section>
-                    <div class="piechart" style="width=400px; height=400px">
-    <canvas id="twitterChart"></canvas>
-</div>
+                    <div class="piechart col-md-7">
+                      <canvas id="twitterChart" width=100 height=100></canvas>
+                    </div>
                 </div>
                 <!-- /page-inner -->
             </div>
