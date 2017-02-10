@@ -27,12 +27,13 @@
         sessionStorage.setItem('username', username)
         sessionStorage.setItem('streamName', topStream);
         // call function to embed featured stream in front end
-        let client = chatSkimmer(username, topStream, token);
+        let chat = chatSkimmer(username, topStream, token);
         $('#streamSubmit').on('click', ()=>{
-            console.log('aASDFASDFASDFASDFLAJSDFKJWBEKRQJHGSIUYGFKCBNX');
             let newStream = loadSelectedStream();
+            chat.client.part(chat.channel);
             sessionStorage.setItem('twitchMessages', JSON.stringify([]));
-            client.join(newStream);
+            chat.client.join(newStream);
+            chat.channel = newStream;
             // chatSkimmer(sessionStorage.getItem('username'), newStream, token)
         });
     })
@@ -77,6 +78,6 @@
                     'twitchMessages', JSON.stringify(messages));
             }
         });
-        return client
+        return {client, channel}
     }
 }())
