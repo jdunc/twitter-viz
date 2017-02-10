@@ -61,7 +61,6 @@ body {
     left: 0;
     background: #6441A4;
     color: #fff;
-    outline: 1px solid #47a3da;
     /* avoid gap */
 }
 
@@ -69,7 +68,6 @@ body {
     right: 0;
     background: #1DA1F2;
     color: white;
-    outline: 1px solid white;
     /* avoid gap */
 }
 
@@ -143,7 +141,7 @@ top: 100%;
     font-weight: 300;
     font-size: 2em;
     position: relative;
-    top: -75%;
+    top: -150%;
 }
 
 .intro-content h1>span:nth-child(2) {
@@ -225,14 +223,14 @@ top: 100%;
     top: 0;
     overflow: auto;
     min-height: 100%;
-    width: 75%;
+    width: 80%;
     height: auto;
     font-size: 1.4em;
     -webkit-backface-visibility: hidden;
 }
 
 .page-right {
-    left: 25%;
+    left: 11%;
     outline: 5px solid #ecf0f1;
     /* avoid rounding gaps */
     background: #ecf0f1;
@@ -240,6 +238,7 @@ top: 100%;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
 }
+
 
 .splitlayout.open-right {
     background: #ecf0f1;
@@ -503,7 +502,7 @@ top: 100%;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 body {
-    padding: 3em 2em;
+    padding: 0em 0em;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1em;
     line-height: 1;
@@ -568,8 +567,8 @@ span.tw-inner {
     background: -webkit-gradient(radial, 37 56, 25, 36 190, 144, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, -10 72, 10, 310 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))), -webkit-gradient(radial, 72 72, 20, -275 -72, 72, from(rgba(100, 65, 164, 0.99)), to(rgba(100, 65, 164, 0.99))) rgba(100, 65, 164, 0.99) !important;
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') 0 -47px;
 		position: absolute;
-		top: -3.3%;
-		left: 59.7%;
+		top: 1.7%;
+		left: 61%;
 }
 
 .social-share.tw {
@@ -577,7 +576,7 @@ span.tw-inner {
     background: no-repeat url('http://vsxed.github.com/Social-Slides/sprite.png') -73px -47px;
     position: absolute;
     left: 60.7%;
-    bottom: 84.7%;
+    bottom: 80%;
 
 }
 

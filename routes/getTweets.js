@@ -19,6 +19,7 @@ app.get('/getTweets/:search', function(req, res) {
     let params = {
         q: req.params.search,
         count: 100,
+        lang: 'en',
         '-filter': 'retweets'
     }
     let count = 1;

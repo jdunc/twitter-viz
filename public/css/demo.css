@@ -24,6 +24,25 @@ body {
     background: #333;
 }
 
+[class*="col-"] {
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+.social-share{
+	top:17px;
+	float:left
+}
+.open-left > .page-right{
+  left:30%;
+}
+.open-left > .side-right{
+  left:30%;
+}
+
+.piechart{
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
 a {
 	color: #ccc;
 	text-decoration: none;
@@ -31,6 +50,7 @@ a {
 
 a:hover {
 	color: #000;
+	text-decoration: none;
 }
 
 .codropsheader {
