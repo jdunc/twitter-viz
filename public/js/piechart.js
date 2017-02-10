@@ -2,7 +2,6 @@ $(document).ready(function() {
     console.log('READY!');
     $("#twit-search-btn").on('click', (e) => {
         e.preventDefault();
-        // can we clear the chart?
         let words = [];
         let freq = [];
         let searchterm = $("#twit-search-term").val();
@@ -20,7 +19,6 @@ $(document).ready(function() {
                 $('#twitterImages2').append(`<div style="width:300px; height: 300px; overflow:hidden; background-image: url(${results.images[i]}); background-size: cover; float:left"></div>`)
                     // <img src="" style="height:300px; width:auto;">
             }
-            console.log("these are the words", words, freq);
             var ctx = document.getElementById("twitterChart");
             var myChart = new Chart(ctx, {
                 type: 'pie',
