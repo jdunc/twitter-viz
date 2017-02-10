@@ -38,6 +38,7 @@
 
 
 
+
       <!-- Twitter scripts -->
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
           <script src="https://code.jquery.com/jquery-3.1.1.js"
@@ -56,7 +57,7 @@
                 <div class="side side-left">
                     <header class="codropsheader clearfix" style="position:relative">
 
-                        <h1>Data Vix</h1>
+                        <!-- <h1>Data Vix</h1> -->
 
                       </header>
 
@@ -64,8 +65,9 @@
                       <div class="intro-content">
                           <div class="profile1">
                             <a><img src="/img/twitch.png" alt="profile1"></div>
-                          <h1><span></span>
-                              <span>Chat Visualization</span></h1>
+                          <!-- <h1>
+                            <span></span>
+                              <span>Chat Visualization</span></h1> -->
                               </a>
 
 
@@ -75,9 +77,10 @@
                 </div>
                 <div class="side side-right">
                     <div class="intro-content">
-                        <div class="profile2"><img src="/img/twitb.png" alt="profile2"></div>
-                        <a><h1><span></span>
-                          <span>Tweet Visualization</span></h1></a>
+                        <div class="profile2"><a><img src="/img/twitb.png" alt="profile2"></div>
+                        <!-- <h1><span></span>
+                          <span>Tweet Visualization</span></h1> -->
+                        </a>
 
                     </div>
                     <div class="overlay"></div>
@@ -87,8 +90,8 @@
             <div class="page page-right">
                 <div class="page-inner">
                     <section>
-                        <h2>Twitter Tweet Visualization</h2>
-                        <input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here" style="width: 40vw; height:55px;" class="formInfo"></input>
+                        <!-- <h2>Twitter Tweet Visualization</h2> -->
+                        <input type="text" id="twit-search-term" placeholder="Enter #keyword or @username here to see tweet visualization" style="width: 40vw; height:55px;" class="formInfo"></input>
                         <div class="social-share tw">
                            <span class="tw-inner"></span>
                            <button type="submit" id="twit-search-btn" class="cta tw">Search</button> <!-- button needs to make ajax call to piechart.js & send search term -->
