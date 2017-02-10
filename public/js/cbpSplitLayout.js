@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -67,8 +67,8 @@
 				page.addEventListener( transEndEventName, onEndTransFn );
 			};
 
-		splitlayout.querySelector( 'a.back-left' ).addEventListener( eventtype, backToIntro );
-		splitlayout.querySelector( 'a.back-right' ).addEventListener( eventtype, backToIntro );
+		//splitlayout.querySelector( 'a.back-left' ).addEventListener( eventtype, backToIntro );
+		//splitlayout.querySelector( 'a.back-right' ).addEventListener( eventtype, backToIntro );
 	}
 
 	function reset() {

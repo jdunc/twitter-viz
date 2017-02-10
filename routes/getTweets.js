@@ -29,7 +29,7 @@ app.get('/getTweets/:search', function(req, res) {
         //this is the twitter module's method of hitting the endpoint and returning the results
         client.get(path, params, function(error, tweets, response) {
             if (error) {
-                res.send('error!:', error);
+                return res.status(400).send(error);
             };
             let max_id = tweets.search_metadata.max_id_str;
             let lastTweetIndex = tweets.statuses.length - 1;
