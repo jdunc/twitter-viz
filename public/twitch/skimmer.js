@@ -17,18 +17,24 @@
             }
         })
     ]).then((values) => {
-        let topStream = values[1].featured;
-        topStream.sort((a, b) =>{
+        let topStreams = values[1].featured;
+        topStreams.sort((a, b) =>{
           return b.stream.viewers - a.stream.viewers
         })
+        let username = values[0].name;
+        let topStream = topStreams[0].stream.channel.name;
         loadFeaturedStream(topStream);
-
+        sessionStorage.setItem('username', username)
+        sessionStorage.setItem('streamName', topStream);
         // call function to embed featured stream in front end
-        chatSkimmer(values[0].name, topStream[0].stream.channel.name,
-            token);
-
-        // TODO: add on new stream load
-        sessionStorage.setItem('streamName', topStream[0].stream.channel.name);
+        let client = chatSkimmer(username, topStream, token);
+        $('#streamSubmit').on('click', ()=>{
+            console.log('aASDFASDFASDFASDFLAJSDFKJWBEKRQJHGSIUYGFKCBNX');
+            let newStream = loadSelectedStream();
+            sessionStorage.setItem('twitchMessages', JSON.stringify([]));
+            client.join(newStream);
+            // chatSkimmer(sessionStorage.getItem('username'), newStream, token)
+        });
     })
 
     function chatSkimmer(username, channel, token) {
@@ -71,5 +77,6 @@
                     'twitchMessages', JSON.stringify(messages));
             }
         });
+        return client
     }
 }())
