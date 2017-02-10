@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    res.render('landing2');
+    res.render('landing');
 });
 
 router.get('/twitter', (req, res, next) => {
