@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="wholePage" style="position: absolute">
+    <div style="width:400px; height:400px; position: absolute; background-color: white; top:0px;">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+  </div>
+    <script>
+    $(document).ready(function(){
+      $('body').click(
+        function(){
+          console.log('clicked!');
+        });
+  // 
+  // $('body').click(
+  //   function(){
+  //     console.log('clicked!');
+  //     $('#wholePage').animate({
+  //       top: '500px'
+  //     }, 'slow', function(){console.log('animated!');});
+  //   });
+        });
+
+    })
+
+</script>
+  </body>
+</html>
