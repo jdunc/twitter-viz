@@ -18,8 +18,8 @@
         })
     ]).then((values) => {
         let topStreams = values[1].featured;
-        topStreams.sort((a, b) =>{
-          return b.stream.viewers - a.stream.viewers
+        topStreams.sort((a, b) => {
+            return b.stream.viewers - a.stream.viewers
         })
         let username = values[0].name;
         let topStream = topStreams[0].stream.channel.name;
@@ -28,7 +28,7 @@
         sessionStorage.setItem('streamName', topStream);
         // call function to embed featured stream in front end
         let chat = chatSkimmer(username, topStream, token);
-        $('#streamSubmit').on('click', ()=>{
+        $('#streamSubmit').on('click', () => {
             let newStream = loadSelectedStream();
             chat.client.part(chat.channel);
             sessionStorage.setItem('twitchMessages', JSON.stringify([]));
@@ -42,12 +42,9 @@
         const password = `oauth:${token}`;
         // add password, username to sessionStorage
         if (!sessionStorage.getItem('password')) {
-            console.log('first time storing');
             sessionStorage.setItem('password', password);
             sessionStorage.setItem('username', username);
-        } else {
-            console.log('session storage already has username and password');
-        }
+        } else {}
 
         const options = {
             options: {
@@ -78,6 +75,9 @@
                     'twitchMessages', JSON.stringify(messages));
             }
         });
-        return {client, channel}
+        return {
+            client,
+            channel
+        }
     }
 }())
